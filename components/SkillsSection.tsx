@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { motion, useScroll, MotionValue } from "framer-motion";
 
 const skills = [
     {
@@ -47,7 +47,7 @@ interface CardProps {
     progress: MotionValue<number>;
 }
 
-const SkillCard: React.FC<CardProps> = ({ index, skill, progress }) => {
+const SkillCard: React.FC<CardProps> = ({ skill }) => {
     return (
         <div
             className="sticky w-full flex justify-center"

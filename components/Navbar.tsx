@@ -34,6 +34,7 @@ const Navbar: React.FC = () => {
         >
             {/* Logo */}
             <a href="/" className="flex items-center gap-2 group">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src="/logo.png"
                     alt="optimisr"

@@ -9,6 +9,7 @@ const SiteFooter: React.FC = () => {
                 {/* Top */}
                 <div className="flex flex-col lg:flex-row justify-between items-start border-b border-white/10 pb-20 mb-20 gap-16">
                     <div className="flex flex-col gap-10 max-w-sm items-start">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="/logo-white.png"
                             alt="optimisr"
