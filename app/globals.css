@@ -23,7 +23,6 @@
 
 html,
 body {
-  overflow-x: clip;
   background-color: var(--background);
 }
 

@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 <img
                     src="/logo.png"
                     alt="optimisr"
-                    className={`transition-all duration-300 ${isScrolled ? "h-8 md:h-10" : "h-10 md:h-14"} w-auto`}
+                    className={`transition-all duration-300 ${isScrolled ? "h-6 sm:h-8 md:h-10" : "h-7 sm:h-10 md:h-14"} w-auto`}
                 />
             </a>
 
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
             <motion.a
                 href="#"
                 style={{ backgroundColor: ctaBg, color: ctaColor }}
-                className={`transition-all duration-300 rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 flex items-center justify-center ${isScrolled ? "px-6 py-3" : "px-8 py-4"
+                className={`transition-all duration-300 rounded-xl md:rounded-2xl text-[14px] md:text-[17px] font-bold hover:scale-105 active:scale-95 flex items-center justify-center ${isScrolled ? "px-4 py-2.5 md:px-6 md:py-3" : "px-5 py-3 md:px-8 md:py-4"
                     }`}
             >
                 Watch a Demo

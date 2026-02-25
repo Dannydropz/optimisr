@@ -25,7 +25,7 @@ const IntroSection: React.FC = () => {
             whileInView={{ y: 0, borderRadius: "100px 100px 0 0" }}
             viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="section-stack bg-optimisr-black text-white pt-48 pb-64 px-6 md:px-12 xl:px-20 -mt-[100px] overflow-hidden"
+            className="section-stack bg-optimisr-black text-white pt-32 md:pt-48 pb-32 md:pb-64 px-6 md:px-12 xl:px-20 -mt-[100px] overflow-hidden"
         >
             <div className="w-full">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
@@ -53,9 +53,9 @@ const IntroSection: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="mt-64"
+                    className="mt-32 md:mt-64"
                 >
-                    <h2 className="text-[clamp(3.5rem,9vw,8.5rem)] font-black font-condensed uppercase leading-[0.8] tracking-[-0.05em] text-white mb-24 max-w-[90rem]">
+                    <h2 className="text-[clamp(3.5rem,9vw,8.5rem)] font-black font-condensed uppercase leading-[0.8] tracking-[-0.05em] text-white mb-12 md:mb-24 max-w-[90rem]">
                         AUTOMATE THE ROUTINE. EMPOWER YOUR TEAM.
                     </h2>
 

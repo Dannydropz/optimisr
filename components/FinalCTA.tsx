@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 const FinalCTA: React.FC = () => {
     return (
-        <section className="section-stack bg-[#F4F4F4] px-6 pt-48 pb-48 rounded-t-[100px] -mt-[100px]">
+        <section className="section-stack bg-[#F4F4F4] px-6 pt-32 md:pt-48 pb-32 md:pb-48 rounded-t-[100px] -mt-[100px]">
             <div className="max-w-7xl mx-auto">
-                <div className="bg-white rounded-[3rem] p-12 lg:p-24 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-sm">
+                <div className="bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-24 flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 shadow-sm">
                     <div className="max-w-xl">
                         <motion.h2
                             initial={{ opacity: 0, x: 100 }}

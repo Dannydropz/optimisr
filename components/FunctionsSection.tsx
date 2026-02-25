@@ -13,14 +13,14 @@ const solutions = [
 
 const FunctionsSection: React.FC = () => {
     return (
-        <section className="section-stack bg-[#F4F4F4] px-6 pt-48 pb-64 rounded-t-[100px] -mt-[100px]">
+        <section className="section-stack bg-[#F4F4F4] px-6 pt-32 md:pt-48 pb-32 md:pb-64 rounded-t-[100px] -mt-[100px]">
             <div className="max-w-7xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-[clamp(2rem,5vw,4rem)] font-bold font-condensed uppercase leading-none tracking-tight mb-20"
+                    className="text-[clamp(2rem,5vw,4rem)] font-bold font-condensed uppercase leading-none tracking-tight mb-12 md:mb-20"
                 >
                     EVERYTHING YOUR AI EMPLOYEE CAN DO.
                 </motion.h2>

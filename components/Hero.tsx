@@ -96,17 +96,17 @@ const Hero: React.FC = () => {
     if (!isMounted) return <div className="h-screen bg-[#ebeff5]" />;
 
     return (
-        <section className="relative z-0 min-h-screen bg-[#ebeff5] font-sans flex items-center justify-center overflow-hidden pt-32 pb-40">
+        <section className="relative z-0 min-h-screen bg-[#ebeff5] font-sans flex items-center justify-center overflow-hidden pt-24 md:pt-32 pb-24 md:pb-40">
             <div className="w-full h-full max-w-7xl mx-auto px-6 lg:px-24 flex flex-col lg:flex-row items-center relative z-10 gap-16">
 
                 {/* LEFT COLUMN: TITLE */}
                 <div className="w-full lg:w-1/2 flex flex-col justify-center">
 
-                    <h1 className="text-[clamp(4rem,10vw,8.5rem)] font-black font-condensed uppercase leading-[0.85] tracking-[-0.04em] text-optimisr-black mb-8 max-w-[90rem]">
+                    <h1 className="text-[clamp(3rem,10vw,8.5rem)] font-black font-condensed uppercase leading-[0.85] tracking-[-0.04em] text-optimisr-black mb-6 md:mb-8 max-w-[90rem]">
                         YOUR 24/7<br />AI EMPLOYEE
                     </h1>
 
-                    <p className="text-[18px] lg:text-[22px] text-optimisr-black max-w-[480px] mb-12 leading-relaxed font-medium">
+                    <p className="text-[17px] sm:text-[18px] lg:text-[22px] text-optimisr-black max-w-[480px] mb-8 md:mb-12 leading-relaxed font-medium">
                         Never sleeps. No days off. Scales like 10 workers. Cuts costs. Drives revenue.
                     </p>
 
