@@ -9,8 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#E5E5E5", // Hero bg
+        foreground: "#000000",
+        optimisr: {
+          black: "#000000",
+          grey: "#E5E5E5",
+          yellow: "#F9E547",
+          darkgrey: "#444444",
+        },
+      },
+      fontFamily: {
+        sans: ["Suisse Intl", "Inter", "sans-serif"],
+        condensed: ["Suisse Intl Condensed", "sans-serif"],
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '3rem',
+        '6xl': '4rem',
       },
     },
   },
