@@ -15,7 +15,7 @@ const M = 8; // Repeat 8 times for seamless infinite scroll on ultra-wide screen
 const marqueeTasks = Array.from({ length: M }).flatMap(() => tasks);
 
 const SolidConsole = () => (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] z-30 pointer-events-none drop-shadow-[0_30px_50px_rgba(0,0,0,0.15)] flex items-center justify-center">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] z-30 pointer-events-none drop-shadow-[0_30px_50px_rgba(0,0,0,0.15)] flex items-center justify-center scale-[0.65] sm:scale-[0.85] lg:scale-100 transition-transform">
         <svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(300, 200)">
                 {/* Base Shadow */}
