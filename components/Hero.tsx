@@ -87,49 +87,51 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Animation Stage */}
-            <div className="relative w-full h-[400px] flex-shrink-0 mt-0 mb-12">
+            <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] flex-shrink-0 mt-0 mb-12 flex justify-center items-center overflow-hidden">
+                <div className="relative w-[1200px] h-[400px] scale-[0.55] sm:scale-[0.75] lg:scale-100 origin-center flex-shrink-0">
 
-                <SolidConsole />
+                    <SolidConsole />
 
-                {/* Left Track Container (Clipped exactly down the center) */}
-                <div
-                    className="absolute inset-0 z-20 pointer-events-none"
-                    style={{ clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0 100%)' }}
-                >
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap min-w-max">
-                        <div className="animate-slide-right flex items-center">
-                            {marqueeTasks.map((task, idx) => (
-                                <div key={`left-${idx}`} className="inline-flex flex-col items-center justify-center mx-6 w-[260px] md:w-[300px]">
-                                    <div className="bg-[#f3f1eb] border border-[#e8e6df] text-[#4a5851] px-6 py-3.5 rounded-[100px] text-[15px] font-bold shadow-sm whitespace-nowrap">
-                                        {task.text}
+                    {/* Left Track Container (Clipped exactly down the center) */}
+                    <div
+                        className="absolute inset-0 z-20 pointer-events-none"
+                        style={{ clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0 100%)' }}
+                    >
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap min-w-max">
+                            <div className="animate-slide-right flex items-center">
+                                {marqueeTasks.map((task, idx) => (
+                                    <div key={`left-${idx}`} className="inline-flex flex-col items-center justify-center mx-6 w-[260px] md:w-[300px]">
+                                        <div className="bg-[#f3f1eb] border border-[#e8e6df] text-[#4a5851] px-6 py-3.5 rounded-[100px] text-[15px] font-bold shadow-sm whitespace-nowrap">
+                                            {task.text}
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Right Track Container (Clipped precisely down the center) */}
-                <div
-                    className="absolute inset-0 z-20 pointer-events-none"
-                    style={{ clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)' }}
-                >
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap min-w-max">
-                        <div className="animate-slide-right flex items-center">
-                            {marqueeTasks.map((task, idx) => (
-                                <div key={`right-${idx}`} className="inline-flex flex-col items-center justify-center mx-6 w-[260px] md:w-[300px] relative">
-                                    <div className="bg-[#1C1C1E] border border-[#2C2C2E] text-white px-6 py-3.5 rounded-[100px] text-[15px] font-bold shadow-[0_8px_16px_rgba(0,0,0,0.25)] whitespace-nowrap relative z-10 transition-transform duration-300">
-                                        {task.text}
+                    {/* Right Track Container (Clipped precisely down the center) */}
+                    <div
+                        className="absolute inset-0 z-20 pointer-events-none"
+                        style={{ clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)' }}
+                    >
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap min-w-max">
+                            <div className="animate-slide-right flex items-center">
+                                {marqueeTasks.map((task, idx) => (
+                                    <div key={`right-${idx}`} className="inline-flex flex-col items-center justify-center mx-6 w-[260px] md:w-[300px] relative">
+                                        <div className="bg-[#1C1C1E] border border-[#2C2C2E] text-white px-6 py-3.5 rounded-[100px] text-[15px] font-bold shadow-[0_8px_16px_rgba(0,0,0,0.25)] whitespace-nowrap relative z-10 transition-transform duration-300">
+                                            {task.text}
+                                        </div>
+                                        <div className="absolute -bottom-[12px] bg-[#F9E547] text-[#5c4a00] text-[11px] font-bold px-[10px] py-[3px] rounded-[6px] shadow-[0_2px_8px_rgba(0,0,0,0.15)] tracking-wide whitespace-nowrap z-20">
+                                            {task.result}
+                                        </div>
                                     </div>
-                                    <div className="absolute -bottom-[12px] bg-[#F9E547] text-[#5c4a00] text-[11px] font-bold px-[10px] py-[3px] rounded-[6px] shadow-[0_2px_8px_rgba(0,0,0,0.15)] tracking-wide whitespace-nowrap z-20">
-                                        {task.result}
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </section>
     );
