@@ -26,13 +26,13 @@ const useCases = [
 
 const UseCasesSection: React.FC = () => {
     return (
-        <section className="section-stack bg-white px-6 pt-48 pb-64 rounded-t-[100px] -mt-[100px] overflow-hidden">
+        <section className="section-stack bg-white px-6 pt-48 pb-64 rounded-t-[100px] -mt-[100px] overflow-clip">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-10">
                     <motion.h2
                         initial={{ opacity: 0, x: 100 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-80px" }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold font-condensed uppercase leading-none tracking-tight"
                     >
@@ -50,7 +50,7 @@ const UseCasesSection: React.FC = () => {
                             key={i}
                             initial={{ opacity: 0, x: 100 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.1 }}
+                            viewport={{ once: true, amount: 0.1, margin: "-60px" }}
                             transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                             className="flex-shrink-0 w-[85vw] lg:w-[600px] bg-[#F4F4F4] rounded-[3rem] p-12 transition-all hover:shadow-xl group"
                         >
@@ -59,7 +59,7 @@ const UseCasesSection: React.FC = () => {
                                 <motion.div
                                     initial={{ scale: 0.5, opacity: 0 }}
                                     whileInView={{ scale: 1, opacity: 1 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-60px" }}
                                     transition={{ duration: 0.8, delay: 0.3 + i * 0.2, type: "spring" }}
                                     className="flex flex-col items-center"
                                 >

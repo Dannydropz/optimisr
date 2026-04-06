@@ -5,37 +5,37 @@ import { motion, useScroll, MotionValue } from "framer-motion";
 
 const skills = [
     {
-        title: "Lead Generation",
-        description: "Your AI works 24/7 scanning channels and engaging prospects so your pipeline is always full and your sales team always has interested leads to close.",
-        icon: "🎯",
+        title: "Call Answering",
+        description: "Every call picked up on the first ring. Your 24/7 receptionist answers with your business name, in a natural British voice, and handles the enquiry professionally — day, night, weekends, bank holidays.",
+        icon: "📞",
         color: "bg-blue-100",
         textColor: "text-blue-600"
     },
     {
-        title: "Customer Support",
-        description: "Resolve tickets automatically, answer FAQs instantly, and route complex issues seamlessly. Provide white-glove service without growing headcount.",
-        icon: "🎧",
+        title: "Lead Qualification",
+        description: "The AI asks the right questions: what's the job, where are they, when do they need it, what's the budget. You only get notified about real leads that match your services.",
+        icon: "✅",
         color: "bg-green-100",
         textColor: "text-green-600"
     },
     {
-        title: "Social Media",
-        description: "Engage with your audience across platforms. Auto-reply to comments, manage DMs, and turn social interactions into real business opportunities.",
-        icon: "📱",
+        title: "Appointment Booking",
+        description: "Qualified leads get booked straight into your calendar. No back-and-forth texts, no missed callbacks. The job is in your diary before you've finished the one you're on.",
+        icon: "📅",
         color: "bg-purple-100",
         textColor: "text-purple-600"
     },
     {
-        title: "Ad Optimization",
-        description: "Automatically refine your ad targeting, write compelling copy, and handle A/B testing dynamically to maximize your return on ad spend.",
-        icon: "📈",
+        title: "Instant Notifications",
+        description: "Get a text and email the moment a new lead comes in — with the caller's name, job details, and contact info. You see everything in real-time, even if you're on the tools.",
+        icon: "💬",
         color: "bg-rose-100",
         textColor: "text-rose-600"
     },
     {
-        title: "Data Analysis",
-        description: "Identify trends and pull insights out of your data in real-time. Make smarter, faster decisions without spending hours in spreadsheets.",
-        icon: "📊",
+        title: "Review Requests",
+        description: "After every completed job, your AI automatically texts the customer asking for a Google review. Build your reputation on autopilot and win more work from search.",
+        icon: "⭐",
         color: "bg-amber-100",
         textColor: "text-amber-600"
     },
@@ -91,20 +91,20 @@ const SkillsSection: React.FC = () => {
                 <motion.h2
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                     className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight text-center md:text-left"
                 >
-                    EVERY SKILL. ONE AI.
+                    EVERYTHING YOUR 24/7 RECEPTIONIST DOES FOR YOU.
                 </motion.h2>
                 <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 1, delay: 0.2 }}
                     className="text-xl text-black/50 mt-6 max-w-2xl text-center md:text-left font-medium"
                 >
-                    Your AI Agent learns your business inside and out, mastering every critical function you need to grow and outpace the competition.
+                    Set it up once. It handles your calls, your bookings, and your follow-ups — 24 hours a day, 7 days a week.
                 </motion.p>
             </div>
 

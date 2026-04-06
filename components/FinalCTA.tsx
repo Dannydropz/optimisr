@@ -12,14 +12,14 @@ const FinalCTA: React.FC = () => {
                         <motion.h2
                             initial={{ opacity: 0, x: 100 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                             className="text-[clamp(2.5rem,6vw,5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight mb-8"
                         >
-                            Your AI Employee is Ready to Clock In.
+                            Your Next Customer Is Calling. Will You Answer?
                         </motion.h2>
                         <p className="text-[21px] font-medium text-black/50">
-                            Stop losing leads to slow responses. See how Optimisr can convert more leads, book more appointments, and grow your revenue—starting today.
+                            Every missed call is money walking out the door. Set up your 24/7 receptionist in under a week and never lose a lead to voicemail again. One flat monthly price. No contracts. Cancel anytime.
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row items-center gap-6 w-full lg:w-auto">
@@ -27,13 +27,13 @@ const FinalCTA: React.FC = () => {
                             href="#"
                             className="w-full sm:w-auto px-12 py-6 bg-optimisr-yellow rounded-2xl text-[19px] font-bold text-center hover:scale-105 transition-all"
                         >
-                            Watch a Demo
+                            Hear a Demo Call
                         </a>
                         <a
-                            href="#"
+                            href="#pricing"
                             className="text-[19px] font-bold underline underline-offset-4 hover:text-optimisr-darkgrey"
                         >
-                            Talk to Sales
+                            See Pricing
                         </a>
                     </div>
                 </div>

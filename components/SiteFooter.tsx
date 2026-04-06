@@ -16,7 +16,10 @@ const SiteFooter: React.FC = () => {
                             className="h-10 md:h-14 w-auto object-contain shrink-0 self-start"
                         />
                         <p className="text-[20px] font-medium leading-[1.3] text-white/50">
-                            Have questions or want to chat? Drop us a line → <a href="mailto:hello@optimisr.com" className="text-white">hello@optimisr.com</a>
+                            Never miss a lead. Built for tradespeople.
+                        </p>
+                        <p className="text-[17px] font-medium leading-[1.3] text-white/40">
+                            Have questions? Drop us a line &rarr; <a href="mailto:hello@optimisr.com" className="text-white">hello@optimisr.com</a>
                         </p>
                     </div>
 
@@ -24,16 +27,17 @@ const SiteFooter: React.FC = () => {
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Platform</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">AI Employees</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Speed to Lead</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">AI Voice Agent</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">How It Works</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">24/7 Receptionist</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Lead Qualification</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Appointment Booking</a></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Solutions</h4>
+                            <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Features</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Lead Capture</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Appointment Booking</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Call Answering</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Instant Notifications</a></li>
                                 <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Follow-Up Automation</a></li>
                                 <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Review Management</a></li>
                             </ul>
@@ -41,16 +45,17 @@ const SiteFooter: React.FC = () => {
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Industries</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Home Services</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Real Estate</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Dental & Medical</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Auto Dealers</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Plumbers &amp; Gas Engineers</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Electricians</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Roofers &amp; Builders</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Locksmiths</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">General Home Services</a></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Company</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">About Us</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">About</a></li>
                                 <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Pricing</a></li>
                                 <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Contact</a></li>
                             </ul>

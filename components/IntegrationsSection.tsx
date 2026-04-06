@@ -4,14 +4,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const stats = [
-    { value: "78%", label: "Cost Reduction" },
-    { value: "24/7", label: "Availability" },
-    { value: "99.9%", label: "Accuracy Rate" },
-    { value: "< 60s", label: "Lead Response" },
-    { value: "30%", label: "Revenue Boost" },
-    { value: "100x", label: "Productivity" },
-    { value: "5x", label: "More Appointments" },
     { value: "0", label: "Missed Calls" },
+    { value: "< 3s", label: "Answer Time" },
+    { value: "24/7", label: "Availability" },
+    { value: "30%+", label: "Leads Recovered" },
+    { value: "5x", label: "More Bookings" },
+    { value: "100%", label: "Calls Answered" },
+    { value: "0", label: "Per Missed Opportunity" },
+    { value: "1", label: "Setup. Done." },
 ];
 
 const IntegrationsSection: React.FC = () => {
@@ -22,14 +22,14 @@ const IntegrationsSection: React.FC = () => {
                     <motion.h2
                         initial={{ opacity: 0, x: 100 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-80px" }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         className="text-[clamp(2.5rem,6vw,5.5rem)] font-black font-condensed uppercase leading-[0.85] tracking-tighter mb-6 md:mb-8"
                     >
                         THE NUMBERS DON&apos;T LIE.
                     </motion.h2>
                     <p className="text-[21px] leading-[1.4] text-black/50 font-medium">
-                        Businesses using Optimisr AI Employees see measurable results from day one. No payroll, no sick days, no missed leads—just consistent, around-the-clock performance.
+                        Tradespeople using Optimisr recover leads they were losing every single day. No extra staff, no answering service, no missed jobs.
                     </p>
                 </div>
 
@@ -39,14 +39,14 @@ const IntegrationsSection: React.FC = () => {
                             key={stat.label}
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-60px" }}
                             transition={{ duration: 0.5, delay: i * 0.07, type: "spring", stiffness: 200 }}
                             className="h-40 bg-white flex flex-col items-center justify-center rounded-2xl hover:bg-optimisr-yellow transition-colors group cursor-default"
                         >
                             <motion.span
                                 className="text-[36px] font-black font-condensed text-black group-hover:scale-110 transition-transform"
                                 whileInView={{ scale: [0.5, 1] }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-60px" }}
                                 transition={{ duration: 0.5, delay: 0.3 + i * 0.07 }}
                             >
                                 {stat.value}

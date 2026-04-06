@@ -4,10 +4,10 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const navLinks = [
-    "AI Employees",
-    "Solutions",
-    "Industries",
+    "How It Works",
+    "Features",
     "Pricing",
+    "Demo",
     "About",
 ];
 
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
                 className={`transition-all duration-300 rounded-xl md:rounded-2xl text-[14px] md:text-[17px] font-bold hover:scale-105 active:scale-95 flex items-center justify-center ${isScrolled ? "px-4 py-2.5 md:px-6 md:py-3" : "px-5 py-3 md:px-8 md:py-4"
                     }`}
             >
-                Watch a Demo
+                Hear a Demo Call
             </motion.a>
         </header>
     );
