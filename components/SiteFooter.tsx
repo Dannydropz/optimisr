@@ -66,7 +66,7 @@ const SiteFooter: React.FC = () => {
                 {/* Bottom */}
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-10">
                     <div className="flex gap-10 items-center">
-                        <span className="text-[14px] font-medium text-white/30">© 2025 Optimisr AI. All rights reserved.</span>
+                        <span className="text-[14px] font-medium text-white/30">© 2026 Optimisr AI. All rights reserved.</span>
                     </div>
                     <div className="flex gap-10 items-center text-[14px] font-medium text-white/40">
                         <a href="#" className="hover:text-white">YouTube</a>

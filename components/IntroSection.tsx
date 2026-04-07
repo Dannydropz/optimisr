@@ -6,15 +6,15 @@ import { motion } from "framer-motion";
 const items = [
     {
         label: "MORNING.",
-        text: "8am. You're under a boiler in Croydon. Phone buzzes — three missed calls before 9. Two of them already called someone else.",
+        text: "8am. You're on a job. Phone buzzes — three missed calls before 9. Two of them already called someone else.",
     },
     {
         label: "EVENING.",
-        text: "Emergency leak. Homeowner finds you on Google. Straight to voicemail. They scroll to the next result and book them instead.",
+        text: "Customer finds you on Google. Straight to voicemail. They scroll to the next result and book them instead.",
     },
     {
         label: "ALWAYS.",
-        text: "You're on the tools earning money — but every unanswered call is a job you'll never know you lost. Your competitor answered in 30 seconds. You answered in 3 hours. Game over.",
+        text: "You're earning money — but every unanswered call is a job you'll never know you lost. Your competitor answered in 30 seconds. You answered in 3 hours. Game over.",
     },
 ];
 
@@ -61,7 +61,9 @@ const IntroSection: React.FC = () => {
                     className="mt-32 md:mt-64"
                 >
                     <h2 className="text-[clamp(3.5rem,9vw,8.5rem)] font-black font-condensed uppercase leading-[0.8] tracking-[-0.05em] text-white mb-12 md:mb-24 max-w-[90rem]">
-                        STOP PAYING FOR LEADS YOU NEVER ANSWER.
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>STOP GIVING</motion.span>
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>LEADS TO YOUR</motion.span>
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>COMPETITORS.</motion.span>
                     </h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl">

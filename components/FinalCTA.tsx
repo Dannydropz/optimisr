@@ -5,19 +5,14 @@ import { motion } from "framer-motion";
 
 const FinalCTA: React.FC = () => {
     return (
-        <section className="section-stack bg-[#F4F4F4] px-6 pt-32 md:pt-48 pb-32 md:pb-48 rounded-t-[100px] -mt-[100px]">
+        <section className="section-stack bg-[#F4F4F4] px-6 pt-16 md:pt-24 pb-32 md:pb-48">
             <div className="max-w-7xl mx-auto">
                 <div className="bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-24 flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 shadow-sm">
                     <div className="max-w-xl">
-                        <motion.h2
-                            initial={{ opacity: 0, x: 100 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, margin: "-80px" }}
-                            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                            className="text-[clamp(2.5rem,6vw,5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight mb-8"
-                        >
-                            Your Next Customer Is Already Calling.
-                        </motion.h2>
+                        <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight mb-8">
+                            <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>Your Next Customer</motion.span>
+                            <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>Is Already Calling.</motion.span>
+                        </h2>
                         <p className="text-[21px] font-medium text-black/50">
                             Every missed call is a job your competitor picks up. Get your AI receptionist live in under a week — one flat monthly price, no contracts, cancel anytime.
                         </p>

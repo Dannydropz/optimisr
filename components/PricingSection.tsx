@@ -65,7 +65,8 @@ const PricingSection: React.FC = () => {
                     className="mb-16 md:mb-24"
                 >
                     <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-black font-condensed uppercase leading-[0.9] tracking-tight">
-                        SIMPLE PRICING. NO SURPRISES.
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>SIMPLE PRICING.</motion.span>
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>NO SURPRISES.</motion.span>
                     </h2>
                     <p className="text-[21px] leading-[1.4] text-black/50 font-medium mt-6 max-w-2xl">
                         One flat monthly fee. You know exactly what you&apos;re paying. Your 24/7 receptionist pays for itself with one extra job.

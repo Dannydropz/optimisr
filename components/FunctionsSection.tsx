@@ -13,7 +13,7 @@ const solutions = [
 
 const FunctionsSection: React.FC = () => {
     return (
-        <section className="section-stack bg-[#F4F4F4] px-6 pt-32 md:pt-48 pb-32 md:pb-64 rounded-t-[100px] -mt-[100px]">
+        <section className="section-stack bg-[#F4F4F4] px-6 pt-32 md:pt-48 pb-16 md:pb-24 rounded-t-[100px] -mt-[100px]">
             <div className="max-w-7xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, x: 100 }}
@@ -36,12 +36,9 @@ const FunctionsSection: React.FC = () => {
                             className="group border-t border-black/10 pt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 hover:bg-white/50 transition-all rounded-xl lg:px-6"
                         >
                             <h3 className="text-[32px] font-bold w-full lg:w-1/4 group-hover:text-black transition-colors">{sol.title}</h3>
-                            <p className="text-[19px] leading-[1.4] text-black/50 font-medium w-full lg:w-2/4 group-hover:text-black/80 transition-colors">
+                            <p className="text-[19px] leading-[1.4] text-black/50 font-medium w-full lg:w-3/4 group-hover:text-black/80 transition-colors">
                                 {sol.text}
                             </p>
-                            <a href="#" className="text-[17px] font-bold w-full lg:w-1/4 text-right underline underline-offset-4 flex-shrink-0">
-                                Learn more
-                            </a>
                         </motion.div>
                     ))}
                 </div>

@@ -86,17 +86,13 @@ const SkillsSection: React.FC = () => {
     });
 
     return (
-        <section className="section-stack bg-[#F4F4F4] pt-20 md:pt-32 lg:pt-48 pb-[10vh] md:pb-[20vh] rounded-t-[50px] md:rounded-t-[100px] -mt-[50px] md:-mt-[100px]" ref={containerRef}>
+        <section className="section-stack bg-[#F4F4F4] pt-20 md:pt-32 lg:pt-48 pb-16 md:pb-32 rounded-t-[50px] md:rounded-t-[100px] -mt-[50px] md:-mt-[100px]" ref={containerRef}>
             <div className="max-w-7xl mx-auto px-6 mb-16 md:mb-24 relative z-10">
-                <motion.h2
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight text-center md:text-left"
-                >
-                    EVERYTHING YOUR 24/7 RECEPTIONIST DOES FOR YOU.
-                </motion.h2>
+                <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight text-center md:text-left">
+                    <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>EVERYTHING YOUR</motion.span>
+                    <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>24/7 RECEPTIONIST</motion.span>
+                    <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>DOES FOR YOU.</motion.span>
+                </h2>
                 <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

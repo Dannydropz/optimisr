@@ -212,9 +212,9 @@ const Hero: React.FC = () => {
                     </div>
 
                     <h1 className="text-[clamp(4rem,6.5vw,7rem)] font-black font-condensed uppercase leading-[0.88] tracking-[-0.04em] text-optimisr-black mb-6 flex flex-col items-start w-full">
-                        <span>Turn Every</span>
-                        <span>Call Into a</span>
-                        <div className="text-optimisr-yellow relative w-full h-[1.05em] mt-2">
+                        <motion.span initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }} className="block">Turn Every</motion.span>
+                        <motion.span initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }} className="block">Call Into a</motion.span>
+                        <motion.div initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }} className="text-optimisr-yellow relative w-full h-[1.05em] mt-2">
                             <AnimatePresence mode="popLayout">
                                 <motion.span
                                     key={wordIndex}
@@ -227,7 +227,7 @@ const Hero: React.FC = () => {
                                     {rotatingWords[wordIndex]}
                                 </motion.span>
                             </AnimatePresence>
-                        </div>
+                        </motion.div>
                     </h1>
 
                     <p className="text-[18px] lg:text-[20px] xl:text-[22px] text-optimisr-black max-w-[480px] mb-10 leading-relaxed font-medium">
@@ -264,8 +264,8 @@ const Hero: React.FC = () => {
                 </div>
 
                 <h1 className="text-[clamp(2.5rem,10vw,4rem)] font-black font-condensed uppercase leading-[0.95] tracking-[-0.04em] text-optimisr-black mb-6 flex flex-col items-center w-full">
-                    <span className="text-center">Turn Every Call Into a</span>
-                    <div className="text-optimisr-yellow relative w-full h-[1.1em] mt-1">
+                    <motion.span initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }} className="text-center block">Turn Every Call Into a</motion.span>
+                    <motion.div initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }} className="text-optimisr-yellow relative w-full h-[1.1em] mt-1">
                         <AnimatePresence mode="popLayout">
                             <motion.span
                                 key={wordIndex}
@@ -278,7 +278,7 @@ const Hero: React.FC = () => {
                                 {rotatingWords[wordIndex]}
                             </motion.span>
                         </AnimatePresence>
-                    </div>
+                    </motion.div>
                 </h1>
 
                 <p className="text-[18px] text-optimisr-black max-w-[500px] mb-8 leading-relaxed font-medium mx-auto">

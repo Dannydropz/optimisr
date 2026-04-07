@@ -12,18 +12,13 @@ const stats = [
 
 const IntegrationsSection: React.FC = () => {
     return (
-        <section className="section-stack bg-[#F4F4F4] pt-20 md:pt-48 pb-24 md:pb-64 px-6 rounded-t-[50px] md:rounded-t-[100px] -mt-[50px] md:-mt-[100px] overflow-hidden">
+        <section className="section-stack bg-[#F4F4F4] pt-16 md:pt-24 pb-24 md:pb-48 px-6 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="max-w-4xl mb-12 md:mb-24">
-                    <motion.h2
-                        initial={{ opacity: 0, x: 100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-80px" }}
-                        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-[clamp(2.5rem,6vw,5.5rem)] font-black font-condensed uppercase leading-[0.85] tracking-tighter mb-6 md:mb-8"
-                    >
-                        THE NUMBERS DON&apos;T LIE.
-                    </motion.h2>
+                    <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-black font-condensed uppercase leading-[0.85] tracking-tighter mb-6 md:mb-8">
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>THE NUMBERS</motion.span>
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>DON&apos;T LIE.</motion.span>
+                    </h2>
                     <p className="text-[21px] leading-[1.4] text-black/50 font-medium">
                         Tradespeople using Optimisr recover leads they were losing every single day. No extra staff, no answering service, no missed jobs.
                     </p>
