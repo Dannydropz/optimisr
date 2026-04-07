@@ -34,7 +34,7 @@ const skills = [
     },
     {
         title: "Review Requests",
-        description: "After every completed job, your AI automatically texts the customer asking for a Google review. Build your reputation on autopilot and win more work from search.",
+        description: "After every completed job, your AI texts the customer asking for a Google review. More 5-star reviews = higher on Google = more calls. Runs on autopilot.",
         icon: "⭐",
         color: "bg-amber-100",
         textColor: "text-amber-600"

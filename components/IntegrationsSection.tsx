@@ -4,14 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const stats = [
-    { value: "0", label: "Missed Calls" },
-    { value: "< 3s", label: "Answer Time" },
-    { value: "24/7", label: "Availability" },
-    { value: "30%+", label: "Leads Recovered" },
-    { value: "5x", label: "More Bookings" },
-    { value: "100%", label: "Calls Answered" },
-    { value: "0", label: "Per Missed Opportunity" },
-    { value: "1", label: "Setup. Done." },
+    { value: "< 3s", label: "Average answer time", highlight: false },
+    { value: "30%+", label: "More leads recovered", highlight: false },
+    { value: "24/7", label: "Every call answered — nights, weekends, bank holidays", highlight: false },
+    { value: "£2,400+", label: "Average monthly revenue recovered per client", highlight: true },
 ];
 
 const IntegrationsSection: React.FC = () => {
@@ -33,7 +29,7 @@ const IntegrationsSection: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {stats.map((stat, i) => (
                         <motion.div
                             key={stat.label}
@@ -41,17 +37,25 @@ const IntegrationsSection: React.FC = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true, margin: "-60px" }}
                             transition={{ duration: 0.5, delay: i * 0.07, type: "spring", stiffness: 200 }}
-                            className="h-40 bg-white flex flex-col items-center justify-center rounded-2xl hover:bg-optimisr-yellow transition-colors group cursor-default"
+                            className={`min-h-48 p-6 flex flex-col items-center justify-center text-center rounded-2xl group cursor-default transition-all ${
+                                stat.highlight 
+                                    ? 'bg-optimisr-yellow shadow-xl scale-[1.02] md:scale-105 border-2 border-black/5' 
+                                    : 'bg-white hover:bg-[#fafafa]'
+                            }`}
                         >
                             <motion.span
-                                className="text-[36px] font-black font-condensed text-black group-hover:scale-110 transition-transform"
+                                className={`text-[42px] font-black font-condensed transition-transform ${
+                                    stat.highlight ? 'text-black group-hover:scale-110' : 'text-black group-hover:scale-110'
+                                }`}
                                 whileInView={{ scale: [0.5, 1] }}
                                 viewport={{ once: true, margin: "-60px" }}
                                 transition={{ duration: 0.5, delay: 0.3 + i * 0.07 }}
                             >
                                 {stat.value}
                             </motion.span>
-                            <span className="text-[13px] font-bold text-black/30 group-hover:text-black/60 transition-colors uppercase tracking-widest mt-2">
+                            <span className={`text-[14px] font-bold uppercase tracking-widest mt-4 leading-snug ${
+                                stat.highlight ? 'text-black/70' : 'text-black/40 group-hover:text-black/60 transition-colors'
+                            }`}>
                                 {stat.label}
                             </span>
                         </motion.div>

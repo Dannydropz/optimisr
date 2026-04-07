@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Optimisr | AI Employees That Convert Leads & Drive Revenue",
+  title: "Optimisr | 24/7 AI Receptionist for UK Tradespeople — Never Miss a Lead",
   description:
     "Optimisr delivers AI employees that respond to leads in seconds, book appointments 24/7, and follow up automatically — turning missed calls into closed deals.",
 };

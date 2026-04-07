@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 
 const items = [
     {
-        label: "MONDAY MORNING.",
-        text: "8am. Phone's ringing off the hook. You're under a boiler in Croydon. Three missed calls before 9. Two of them already called someone else.",
+        label: "MORNING.",
+        text: "8am. You're under a boiler in Croydon. Phone buzzes — three missed calls before 9. Two of them already called someone else.",
     },
     {
-        label: "SATURDAY EVENING.",
+        label: "EVENING.",
         text: "Emergency leak. Homeowner finds you on Google. Straight to voicemail. They scroll to the next result and book them instead.",
     },
     {
-        label: "EVERY SINGLE DAY.",
+        label: "ALWAYS.",
         text: "You're on the tools earning money — but every unanswered call is a job you'll never know you lost. Your competitor answered in 30 seconds. You answered in 3 hours. Game over.",
     },
 ];
@@ -61,15 +61,15 @@ const IntroSection: React.FC = () => {
                     className="mt-32 md:mt-64"
                 >
                     <h2 className="text-[clamp(3.5rem,9vw,8.5rem)] font-black font-condensed uppercase leading-[0.8] tracking-[-0.05em] text-white mb-12 md:mb-24 max-w-[90rem]">
-                        YOU DON&apos;T NEED MORE LEADS. YOU NEED TO STOP LOSING THE ONES YOU ALREADY GET.
+                        STOP PAYING FOR LEADS YOU NEVER ANSWER.
                     </h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl">
                         <p className="text-[20px] lg:text-[22px] leading-[1.35] text-white/90 font-medium">
-                            The average tradesperson misses 30&ndash;40% of incoming calls. Each missed call could be worth &pound;500 to &pound;5,000.
+                            The average tradesperson misses 30&ndash;40% of incoming calls. At &pound;500&ndash;&pound;5,000 per job, that&apos;s thousands walking out the door every month.
                         </p>
                         <p className="text-[20px] lg:text-[22px] leading-[1.35] text-white/40 font-medium">
-                            You&apos;re not losing work because your marketing isn&apos;t working. You&apos;re losing it because you&apos;re too busy doing the work to answer the phone. Optimisr gives you a 24/7 receptionist that picks up every call, qualifies the lead, books the job into your calendar, and sends you a notification &mdash; all before the caller even thinks about ringing your competitor.
+                            Optimisr picks up every call, qualifies the lead, books the job into your calendar, and sends you the details &mdash; before the caller even thinks about ringing your competitor.
                         </p>
                     </div>
                 </motion.div>

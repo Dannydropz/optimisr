@@ -41,14 +41,14 @@ const tiers = [
         setup: "£497",
         period: "/month",
         popular: false,
-        bestFor: "Trade businesses with a team, doing 500k+ and wanting full automation.",
+        bestFor: "Trade businesses with a team, doing £500k+ and wanting full automation.",
         features: [
             "Unlimited AI-answered calls",
             "Everything in Growth, plus:",
             "Google Review automation",
-            "Monthly strategy call",
+            "Monthly optimisation call",
             "Priority support and script changes",
-            "Dashboard showing calls, bookings, and revenue",
+            "Dashboard showing calls, bookings, and revenue recovered",
         ],
     },
 ];
@@ -96,6 +96,11 @@ const PricingSection: React.FC = () => {
 
                             <div className="mb-8">
                                 <h3 className="text-[18px] font-bold uppercase tracking-widest mb-4 opacity-60">{tier.name}</h3>
+                                <div className="flex items-end gap-1 mb-2">
+                                    <span className="text-[40px] md:text-[48px] font-black font-condensed leading-none">{tier.price}</span>
+                                    <span className="text-[16px] font-bold opacity-60 mb-2">{tier.period}</span>
+                                </div>
+                                <div className="text-[15px] font-bold opacity-50">{tier.setup} one-time setup</div>
                             </div>
 
                             <ul className="flex flex-col gap-4 mb-10 flex-grow">
@@ -145,13 +150,13 @@ const PricingSection: React.FC = () => {
                     <div className="bg-white rounded-[1.5rem] p-8 border border-black/5">
                         <span className="text-3xl mb-4 block">🛡️</span>
                         <p className="text-[18px] font-semibold leading-snug text-black/80">
-                            Try it for 14 days. If you don&apos;t see the value, we&apos;ll refund your setup fee. No questions.
+                            14-day money-back guarantee. If Optimisr doesn&apos;t capture real leads in your first two weeks, we refund your setup fee. No questions asked.
                         </p>
                     </div>
                     <div className="bg-white rounded-[1.5rem] p-8 border border-black/5">
                         <span className="text-3xl mb-4 block">💰</span>
                         <p className="text-[18px] font-semibold leading-snug text-black/80">
-                            Your 24/7 receptionist costs less than one missed job per month. Most tradespeople recover that in the first week.
+                            One extra job pays for your entire month. Most clients recover their investment in the first week.
                         </p>
                     </div>
                 </motion.div>

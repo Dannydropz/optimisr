@@ -16,10 +16,10 @@ const FinalCTA: React.FC = () => {
                             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                             className="text-[clamp(2.5rem,6vw,5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight mb-8"
                         >
-                            Your Next Customer Is Calling. Will You Answer?
+                            Your Next Customer Is Already Calling.
                         </motion.h2>
                         <p className="text-[21px] font-medium text-black/50">
-                            Every missed call is money walking out the door. Set up your 24/7 receptionist in under a week and never lose a lead to voicemail again. One flat monthly price. No contracts. Cancel anytime.
+                            Every missed call is a job your competitor picks up. Get your AI receptionist live in under a week — one flat monthly price, no contracts, cancel anytime.
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row items-center gap-6 w-full lg:w-auto">
