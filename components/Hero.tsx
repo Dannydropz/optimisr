@@ -57,187 +57,92 @@ const graphNodes = [
 ];
 
 const DesktopNodeGraph = ({ activeIndex }: { activeIndex: number }) => {
+    const W = 500, H = 720, CX = 250, CY = 360;
+    // Vertical positions — order matches graphNodes: in1, out1, in2, out2, in3, out3
+    const vPos = [
+        { svgX: 80,  svgY: 145, lOff:  45, lX: '0%'    }, // in1  top-left    → label RIGHT
+        { svgX: 80,  svgY: 575, lOff:  45, lX: '0%'    }, // out1 bottom-left  → label RIGHT
+        { svgX: 250, svgY: 115, lOff:  45, lX: '0%'    }, // in2  top-center   → label RIGHT
+        { svgX: 250, svgY: 605, lOff: -45, lX: '-100%' }, // out2 bottom-center → label LEFT
+        { svgX: 420, svgY: 145, lOff: -45, lX: '-100%' }, // in3  top-right    → label LEFT
+        { svgX: 420, svgY: 575, lOff: -45, lX: '-100%' }, // out3 bottom-right  → label LEFT
+    ];
+    const getPath = (svgX: number, svgY: number, side: string) =>
+        side === 'left'
+            ? `M ${svgX} ${svgY} C ${svgX} ${(svgY + CY) / 2}, ${CX} ${(svgY + CY) / 2}, ${CX} ${CY}`
+            : `M ${CX} ${CY} C ${CX} ${(CY + svgY) / 2}, ${svgX} ${(CY + svgY) / 2}, ${svgX} ${svgY}`;
     return (
-        <div className="hidden md:flex relative w-[1000px] h-[500px] scale-[0.6] lg:scale-[0.8] xl:scale-100 origin-center flex-shrink-0 mx-auto justify-center items-center mt-8">
-            <svg className="absolute inset-0 z-0 pointer-events-none" width="1000" height="500" viewBox="0 0 1000 500">
-                {/* Decorative Elements */}
-                <circle cx="50" cy="80" r="4" fill="#d8b4e2" opacity="0.4"/>
-                <circle cx="100" cy="420" r="6" fill="#a7f3d0" opacity="0.4"/>
-                <circle cx="950" cy="120" r="5" fill="#bfdbfe" opacity="0.4"/>
-                <circle cx="900" cy="450" r="4" fill="#d8b4e2" opacity="0.4"/>
-                <ellipse cx="500" cy="50" rx="30" ry="10" fill="none" stroke="#a7f3d0" strokeWidth="1" opacity="0.3" transform="rotate(-15 500 50)"/>
-                <ellipse cx="200" cy="200" rx="20" ry="20" fill="none" stroke="#bfdbfe" strokeWidth="1" opacity="0.3" />
-                <rect x="750" y="200" width="15" height="15" fill="none" stroke="#d8b4e2" strokeWidth="1" opacity="0.3" transform="rotate(25 750 200)"/>
-
-                {/* Connecting Lines */}
+        <div className="flex w-full h-full items-center justify-center overflow-hidden">
+            <div className="relative flex-shrink-0 scale-[0.62] md:scale-[0.68] lg:scale-[0.80] xl:scale-[0.92] origin-center" style={{ width: W, height: H }}>
+                <svg className="absolute inset-0 pointer-events-none" width={W} height={H}>
+                    <circle cx="25"  cy="200" r="4" fill="#d8b4e2" opacity="0.4"/>
+                    <circle cx="25"  cy="520" r="6" fill="#a7f3d0" opacity="0.4"/>
+                    <circle cx="475" cy="200" r="5" fill="#bfdbfe" opacity="0.4"/>
+                    <circle cx="475" cy="520" r="4" fill="#d8b4e2" opacity="0.4"/>
+                    <circle cx="155" cy="220" r="14" fill="none" stroke="#bfdbfe" strokeWidth="1" opacity="0.25"/>
+                    <rect x="356" y="280" width="12" height="12" fill="none" stroke="#d8b4e2" strokeWidth="1" opacity="0.3" transform="rotate(25 362 286)"/>
+                    {graphNodes.map((node, i) => {
+                        const { svgX, svgY } = vPos[i];
+                        const pathId = `vp-${i}`;
+                        const pathD = getPath(svgX, svgY, node.side);
+                        const dots = [
+                            { dur: `${1.4 + (i * 0.37) % 1.1}s`, begin: '0s' },
+                            { dur: `${1.1 + (i * 0.53) % 1.3}s`, begin: `${0.4 + (i * 0.29) % 1.2}s` },
+                            { dur: `${1.6 + (i * 0.61) % 0.9}s`, begin: `${0.9 + (i * 0.41) % 1.5}s` },
+                        ];
+                        return (
+                            <g key={pathId}>
+                                <defs><path id={pathId} d={pathD}/></defs>
+                                <path d={pathD} stroke={node.color} strokeWidth="2" fill="none" opacity="0.15"/>
+                                <path d={pathD} stroke={node.color} strokeWidth="2" fill="none" strokeDasharray="4 16" className="animate-flow-line opacity-60"/>
+                                {dots.map((dot, di) => (
+                                    <circle key={di} r="4.5" fill={node.color} opacity="0.85">
+                                        <animateMotion dur={dot.dur} begin={dot.begin} repeatCount="indefinite" rotate="auto">
+                                            <mpath href={`#${pathId}`}/>
+                                        </animateMotion>
+                                    </circle>
+                                ))}
+                            </g>
+                        );
+                    })}
+                    <g transform={`translate(${CX},${CY})`} className="animate-center-pulse">
+                        <circle cx="0" cy="0" r="105" fill="none" stroke="#d8b4e2" strokeWidth="2" opacity="0.4"/>
+                        <circle cx="0" cy="0" r="125" fill="none" stroke="#a7f3d0" strokeWidth="1" opacity="0.3"/>
+                    </g>
+                    <g transform={`translate(${CX},${CY})`}>
+                        <circle cx="0" cy="0" r="85" fill="none" stroke="#F9E547" strokeWidth="4" className="animate-emanate-pulse"/>
+                    </g>
+                </svg>
+                <div className="absolute z-20 flex items-center justify-center bg-white rounded-full w-[170px] h-[170px] shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-50"
+                    style={{ left: CX, top: CY, transform: 'translate(-50%,-50%)' }}>
+                    <Image src="/logo.png" alt="Optimisr" width={130} height={36} className="w-[120px] h-auto" priority/>
+                </div>
                 {graphNodes.map((node, i) => {
-                    const isLeft = node.side === 'left';
-                    const pathD = isLeft
-                        ? `M ${node.x} ${node.y} C ${(node.x + 500)/2} ${node.y}, ${(node.x + 500)/2} 250, 500 250`
-                        : `M 500 250 C 650 250, ${(node.x + 500)/2} ${node.y}, ${node.x} ${node.y}`;
-                    
+                    const { svgX, svgY, lOff, lX } = vPos[i];
+                    const isActive = i === activeIndex;
+                    const Icon = node.icon;
                     return (
-                        <g key={`path-${i}`}>
-                            <path d={pathD} stroke={node.color} strokeWidth="2" fill="none" opacity="0.15" />
-                            <path
-                                d={pathD}
-                                stroke={node.color}
-                                strokeWidth="2"
-                                fill="none"
-                                strokeDasharray="4 16"
-                                strokeDashoffset="0"
-                                className="animate-flow-line opacity-60"
-                            />
-                            <path
-                                d={pathD}
-                                stroke={node.color}
-                                strokeWidth="5"
-                                strokeLinecap="round"
-                                fill="none"
-                                strokeDasharray="0.1 200"
-                                strokeDashoffset="0"
-                                pathLength="100"
-                                className="animate-flow-dot opacity-80"
-                            />
-                        </g>
-                    )
+                        <div key={node.id}>
+                            <div className="absolute z-10 w-16 h-16 bg-white rounded-full border border-gray-100 flex items-center justify-center transition-all duration-500"
+                                style={{ left: svgX, top: svgY, transform: `translate(-50%,-50%) scale(${isActive ? 1.15 : 1})`, color: node.color, boxShadow: isActive ? `0 12px 30px ${node.color}30` : '0 4px 10px rgba(0,0,0,0.05)' }}>
+                                <Icon/>
+                            </div>
+                            <div className="absolute z-30 transition-all duration-500 ease-out"
+                                style={{ left: svgX + lOff, top: svgY, transform: `translate(${lX},-50%) translateY(${isActive ? '0' : '10px'})`, opacity: isActive ? 1 : 0, pointerEvents: isActive ? 'auto' : 'none', minWidth: 185 }}>
+                                <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.12)] border border-gray-100 p-4 flex flex-col">
+                                    <span className="font-bold text-optimisr-black text-[16px] mb-0.5">{node.title}</span>
+                                    <span className="text-gray-500 text-[13px]">{node.subtitle}</span>
+                                </div>
+                            </div>
+                        </div>
+                    );
                 })}
-
-                {/* Center Pulse Rings */}
-                <g className="animate-center-pulse" transform="translate(500, 250)">
-                    <circle cx="0" cy="0" r="105" fill="none" stroke="#d8b4e2" strokeWidth="2" opacity="0.4" />
-                    <circle cx="0" cy="0" r="125" fill="none" stroke="#a7f3d0" strokeWidth="1" opacity="0.3" />
-                </g>
-                <circle cx="500" cy="250" r="85" fill="none" stroke="#F9E547" strokeWidth="4" className="animate-emanate-pulse" />
-            </svg>
-
-            {/* Center Node */}
-            <div className="absolute left-[500px] top-[250px] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center justify-center bg-white rounded-full w-[170px] h-[170px] shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-50">
-                 <Image src="/logo.png" alt="Optimisr" width={130} height={36} className="w-[120px] h-auto" priority />
-            </div>
-
-            {/* Action Nodes & Floating Labels */}
-            {graphNodes.map((node, i) => {
-                const isActive = i === activeIndex;
-                const Icon = node.icon;
-                return (
-                    <div key={`node-${i}`}>
-                        {/* Node Circle */}
-                        <div
-                            className={`absolute z-10 w-16 h-16 bg-white rounded-full border border-gray-100 flex items-center justify-center transition-all duration-500`}
-                            style={{
-                                left: node.x, top: node.y, transform: `translate(-50%, -50%) scale(${isActive ? 1.15 : 1})`,
-                                color: node.color,
-                                boxShadow: isActive ? `0 12px 30px ${node.color}30` : '0 4px 10px rgb(0 0 0 / 0.05)'
-                            }}
-                        >
-                            <Icon />
-                        </div>
-
-                        {/* Floating Label Card */}
-                        <div
-                            className={`absolute z-30 transition-all duration-500 ease-out flex`}
-                            style={{
-                                left: node.labelPos.left, top: node.labelPos.top,
-                                transform: `translate(${node.labelPos.xAlign}, ${node.labelPos.yAlign}) translateY(${isActive ? '0' : '10px'})`,
-                                opacity: isActive ? 1 : 0,
-                                pointerEvents: isActive ? 'auto' : 'none'
-                            }}
-                        >
-                            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.12)] border border-gray-100 p-4 min-w-[240px] flex flex-col relative overflow-hidden">
-                                <span className="font-bold text-optimisr-black text-[17px] mb-0.5">{node.title}</span>
-                                <span className="text-gray-500 text-[14px]">{node.subtitle}</span>
-                            </div>
-                        </div>
-                    </div>
-                )
-            })}
-        </div>
-    )
-}
-
-const MobileNodeGraph = ({ activeIndex }: { activeIndex: number }) => {
-    const activeNode = graphNodes[activeIndex];
-    const isInput = activeNode.side === 'left';
-    const Icon = activeNode.icon;
-
-    return (
-        <div className="relative w-full max-w-[340px] h-[450px] flex flex-col items-center justify-center md:hidden mx-auto mt-8 mb-4">
-            
-            {/* Top Container (Inputs) */}
-            <div className="absolute top-0 w-full h-[100px] flex items-center justify-center z-20">
-                <AnimatePresence mode="sync">
-                    {isInput && (
-                         <motion.div
-                            key={activeNode.id}
-                            initial={{ opacity: 0, y: 15 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -15, position: 'absolute' }}
-                            transition={{ duration: 0.4 }}
-                            className="bg-white rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.12)] border border-gray-100 p-3 min-w-[240px] flex items-center justify-start gap-4"
-                        >
-                            <div style={{ color: activeNode.color }} className="flex-shrink-0 bg-gray-50 p-2.5 rounded-full"><Icon /></div>
-                            <div className="flex flex-col text-left">
-                                <span className="font-bold text-optimisr-black text-[15px]">{activeNode.title}</span>
-                                <span className="text-gray-500 text-[12px]">{activeNode.subtitle}</span>
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </div>
-
-            {/* Top Flow Line */}
-            <div className={`absolute top-[100px] bottom-[225px] w-0.5 transition-opacity duration-300 ${isInput ? 'opacity-50' : 'opacity-0'}`}>
-                <div className="w-full h-full animate-mobile-flow" style={{
-                    backgroundImage: `linear-gradient(${activeNode.color} 50%, transparent 50%)`,
-                    backgroundSize: '100% 16px',
-                    backgroundPosition: 'center top'
-                }}></div>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full animate-mobile-flow-dot" style={{ backgroundColor: activeNode.color }}></div>
-            </div>
-
-            {/* Center Node */}
-            <div className="relative z-20 flex flex-col items-center justify-center bg-white rounded-full w-[140px] h-[140px] shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-50 my-auto">
-                 <div className="absolute inset-[-15px] rounded-full border border-[#d8b4e2] opacity-40 animate-center-pulse pointer-events-none"></div>
-                 <div className="absolute inset-[-30px] rounded-full border border-[#a7f3d0] opacity-30 pointer-events-none"></div>
-                 <div className="absolute inset-0 rounded-full border-4 border-[#F9E547] animate-emanate-pulse pointer-events-none z-0"></div>
-                 <Image src="/logo.png" alt="Optimisr" width={100} height={28} className="w-[100px] h-auto relative z-10" priority />
-            </div>
-
-            {/* Bottom Flow Line */}
-            <div className={`absolute top-[225px] bottom-[100px] w-0.5 transition-opacity duration-300 flex items-center ${!isInput ? 'opacity-50' : 'opacity-0'}`}>
-                <div className="w-full h-full animate-mobile-flow" style={{
-                    backgroundImage: `linear-gradient(${activeNode.color} 50%, transparent 50%)`,
-                    backgroundSize: '100% 16px',
-                    backgroundPosition: 'center top'
-                }}></div>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full animate-mobile-flow-dot" style={{ backgroundColor: activeNode.color }}></div>
-            </div>
-
-            {/* Bottom Container (Outputs) */}
-            <div className="absolute bottom-0 w-full h-[100px] flex items-center justify-center z-20">
-                <AnimatePresence mode="sync">
-                    {!isInput && (
-                         <motion.div
-                            key={activeNode.id}
-                            initial={{ opacity: 0, y: -15 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 15, position: 'absolute' }}
-                            transition={{ duration: 0.4 }}
-                            className="bg-white rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.12)] border border-gray-100 p-3 min-w-[240px] flex items-center justify-start gap-4"
-                        >
-                            <div style={{ color: activeNode.color }} className="flex-shrink-0 bg-gray-50 p-2.5 rounded-full"><Icon /></div>
-                            <div className="flex flex-col text-left">
-                                <span className="font-bold text-optimisr-black text-[15px]">{activeNode.title}</span>
-                                <span className="text-gray-500 text-[12px]">{activeNode.subtitle}</span>
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
             </div>
         </div>
-    )
+    );
 }
+
+
 
 const Hero: React.FC = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -270,7 +175,7 @@ const Hero: React.FC = () => {
     if (!isMounted) return <div className="h-screen bg-[#FAF9F6]" />;
 
     return (
-        <section className="relative z-0 min-h-screen bg-[#FAF9F6] font-sans flex flex-col items-center justify-start overflow-hidden pt-36 md:pt-40 lg:pt-48 pb-20 md:pb-40">
+        <section className="relative z-0 bg-[#FAF9F6] font-sans overflow-hidden">
             <style>{`
                 @keyframes flowLine {
                     to { stroke-dashoffset: -20; }
@@ -278,20 +183,12 @@ const Hero: React.FC = () => {
                 .animate-flow-line {
                     animation: flowLine 0.7s linear infinite;
                 }
-                @keyframes flowDot {
-                    from { stroke-dashoffset: 0; }
-                    to { stroke-dashoffset: -100; }
-                }
-                .animate-flow-dot {
-                    animation: flowDot 1.2s linear infinite;
-                }
                 @keyframes emanatePulse {
-                    0% { transform: scale(0.9); opacity: 0.8; stroke-width: 4px; border-width: 4px; }
-                    100% { transform: scale(1.6); opacity: 0; stroke-width: 1px; border-width: 1px; }
+                    0%   { r: 85; opacity: 0.7; }
+                    100% { r: 160; opacity: 0; }
                 }
                 .animate-emanate-pulse {
-                    animation: emanatePulse 2.5s ease-out infinite;
-                    transform-origin: center;
+                    animation: emanatePulse 2.2s ease-out infinite;
                 }
                 @keyframes centerPulse {
                     0%, 100% { transform: scale(1); opacity: 0.5; }
@@ -301,36 +198,74 @@ const Hero: React.FC = () => {
                     animation: centerPulse 3s ease-in-out infinite;
                     transform-origin: center;
                 }
-                @keyframes mobileFlowDown {
-                    from { background-position: center 0; }
-                    to { background-position: center 16px; }
-                }
-                .animate-mobile-flow {
-                    animation: mobileFlowDown 0.3s linear infinite;
-                }
-                @keyframes mobileFlowDot {
-                    0% { top: 0; opacity: 1; }
-                    80% { top: 80%; opacity: 1; }
-                    100% { top: 100%; opacity: 0; }
-                }
-                .animate-mobile-flow-dot {
-                    animation: mobileFlowDot 1.2s linear infinite;
-                }
+
             `}</style>
 
-            <div className="relative z-40 flex flex-col items-center text-center px-6 max-w-5xl mx-auto mb-2 shrink-0">
+            {/* ── DESKTOP: two-column above-the-fold layout ── */}
+            <div className="hidden md:grid md:grid-cols-2 md:min-h-screen md:items-center px-8 lg:px-16 xl:px-24 pt-24">
+
+                {/* Left column — copy */}
+                <div className="flex flex-col items-start text-left pr-8 lg:pr-12 z-10">
+
+                    <div className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
+                        24/7 Receptionist for Tradespeople
+                    </div>
+
+                    <h1 className="text-[clamp(4rem,6.5vw,7rem)] font-black font-condensed uppercase leading-[0.88] tracking-[-0.04em] text-optimisr-black mb-6 flex flex-col items-start w-full">
+                        <span>Turn Every</span>
+                        <span>Call Into a</span>
+                        <div className="text-optimisr-yellow relative w-full h-[1.05em] mt-2">
+                            <AnimatePresence mode="popLayout">
+                                <motion.span
+                                    key={wordIndex}
+                                    initial={{ opacity: 0, y: 36 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -36 }}
+                                    transition={{ duration: 0.5, ease: "anticipate" }}
+                                    className="absolute left-0 whitespace-nowrap"
+                                >
+                                    {rotatingWords[wordIndex]}
+                                </motion.span>
+                            </AnimatePresence>
+                        </div>
+                    </h1>
+
+                    <p className="text-[18px] lg:text-[20px] xl:text-[22px] text-optimisr-black max-w-[480px] mb-10 leading-relaxed font-medium">
+                        Your 24/7 receptionist answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
+                    </p>
+
+                    <div className="flex flex-row items-center gap-4">
+                        <a
+                            href="#"
+                            className="px-8 py-4 bg-optimisr-black text-white rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all"
+                        >
+                            Hear a Demo Call
+                        </a>
+                        <a
+                            href="#pricing"
+                            className="px-8 py-4 border-2 border-optimisr-black text-optimisr-black rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all"
+                        >
+                            See Pricing
+                        </a>
+                    </div>
+                </div>
+
+                {/* Right column — graph animation */}
+                <div className="relative h-[min(80vh,600px)] w-full">
+                    <DesktopNodeGraph activeIndex={nodeIndex} />
+                </div>
+            </div>
+
+            {/* ── MOBILE: stacked layout ── */}
+            <div className="md:hidden flex flex-col items-center text-center px-6 pt-36 pb-16">
 
                 <div className="mb-4 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
                     24/7 Receptionist for Tradespeople
                 </div>
 
-                <h1 className="text-[clamp(2.5rem,6vw,4rem)] lg:text-[clamp(3.5rem,5.5vw,5.5rem)] font-black font-condensed uppercase leading-[0.95] tracking-[-0.04em] text-optimisr-black mb-6 md:mb-8 flex flex-col items-center w-full">
-                    <span className="text-center">
-                        Turn Every Call <br className="sm:hidden" />
-                        <span className="hidden sm:inline"> </span>
-                        Into a
-                    </span>
-                    <div className="text-optimisr-yellow relative w-full h-[1.1em] mt-1 lg:mt-3">
+                <h1 className="text-[clamp(2.5rem,10vw,4rem)] font-black font-condensed uppercase leading-[0.95] tracking-[-0.04em] text-optimisr-black mb-6 flex flex-col items-center w-full">
+                    <span className="text-center">Turn Every Call Into a</span>
+                    <div className="text-optimisr-yellow relative w-full h-[1.1em] mt-1">
                         <AnimatePresence mode="popLayout">
                             <motion.span
                                 key={wordIndex}
@@ -346,31 +281,22 @@ const Hero: React.FC = () => {
                     </div>
                 </h1>
 
-                <p className="text-[20px] sm:text-[24px] lg:text-[28px] text-optimisr-black max-w-[700px] mb-8 md:mb-10 leading-relaxed font-medium mx-auto">
+                <p className="text-[18px] text-optimisr-black max-w-[500px] mb-8 leading-relaxed font-medium mx-auto">
                     Your 24/7 receptionist answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
                 </p>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row items-center gap-4">
-                    <a
-                        href="#"
-                        className="px-8 py-4 bg-optimisr-black text-white rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all"
-                    >
+                <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
+                    <a href="#" className="px-8 py-4 bg-optimisr-black text-white rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all">
                         Hear a Demo Call
                     </a>
-                    <a
-                        href="#pricing"
-                        className="px-8 py-4 border-2 border-optimisr-black text-optimisr-black rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all"
-                    >
+                    <a href="#pricing" className="px-8 py-4 border-2 border-optimisr-black text-optimisr-black rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all">
                         See Pricing
                     </a>
                 </div>
-            </div>
 
-            {/* Animation Stage */}
-            <div className="w-full mt-4 md:mt-8 px-4 flex-shrink-0">
-                <DesktopNodeGraph activeIndex={nodeIndex} />
-                <MobileNodeGraph activeIndex={nodeIndex} />
+                <div className="w-full h-[500px] mt-4">
+                    <DesktopNodeGraph activeIndex={nodeIndex} />
+                </div>
             </div>
 
         </section>
