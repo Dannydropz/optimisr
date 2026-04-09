@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Optimisr | 24/7 AI Receptionist for UK Tradespeople — Never Miss a Lead",
   description:
     "Optimisr delivers AI employees that respond to leads in seconds, book appointments 24/7, and follow up automatically — turning missed calls into closed deals.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 import { SmoothScroll } from "@/components/SmoothScroll";
