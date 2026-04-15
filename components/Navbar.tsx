@@ -4,11 +4,11 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const navLinks = [
-    "How It Works",
-    "Features",
-    "Pricing",
-    "Demo",
-    "About",
+    { name: "How It Works", href: "#" },
+    { name: "Features", href: "#" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Demo", href: "#" },
+    { name: "About", href: "#" },
 ];
 
 const Navbar: React.FC = () => {
@@ -50,11 +50,11 @@ const Navbar: React.FC = () => {
                 <div className="flex items-center gap-8">
                     {navLinks.map((link) => (
                         <a
-                            key={link}
-                            href="#"
+                            key={link.name}
+                            href={link.href}
                             className="text-[17px] font-medium text-optimisr-darkgrey hover:text-black transition-colors"
                         >
-                            {link}
+                            {link.name}
                         </a>
                     ))}
                 </div>
