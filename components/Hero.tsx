@@ -231,7 +231,7 @@ const Hero: React.FC = () => {
                     </h1>
 
                     <p className="text-[18px] lg:text-[20px] xl:text-[22px] text-optimisr-black max-w-[480px] mb-10 leading-relaxed font-medium">
-                        Your 24/7 Call Answering answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
+                        Answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
                     </p>
 
                     <div className="flex flex-row items-center gap-4">
@@ -282,7 +282,7 @@ const Hero: React.FC = () => {
                 </h1>
 
                 <p className="text-[18px] text-optimisr-black max-w-[500px] mb-8 leading-relaxed font-medium mx-auto">
-                    Your 24/7 Call Answering answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
+                    Answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
