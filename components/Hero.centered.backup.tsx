@@ -325,7 +325,7 @@ const Hero: React.FC = () => {
             <div className="relative z-40 flex flex-col items-center text-center px-6 max-w-5xl mx-auto mb-2 shrink-0">
 
                 <div className="mb-4 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
-                    24/7 Receptionist for Tradespeople
+                    24/7 Call Answering for Tradespeople
                 </div>
 
                 <h1 className="text-[clamp(2.5rem,6vw,4rem)] lg:text-[clamp(3.5rem,5.5vw,5.5rem)] font-black font-condensed uppercase leading-[0.95] tracking-[-0.04em] text-optimisr-black mb-6 md:mb-8 flex flex-col items-center w-full">
@@ -351,7 +351,7 @@ const Hero: React.FC = () => {
                 </h1>
 
                 <p className="text-[20px] sm:text-[24px] lg:text-[28px] text-optimisr-black max-w-[700px] mb-8 md:mb-10 leading-relaxed font-medium mx-auto">
-                    Your 24/7 receptionist answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
+                    Your 24/7 Call Answering answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
                 </p>
 
                 {/* CTA Buttons */}

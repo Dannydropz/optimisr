@@ -28,7 +28,7 @@ const SiteFooter: React.FC = () => {
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Platform</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
                                 <li><a href="#" className="hover:text-optimisr-yellow transition-colors">How It Works</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">24/7 Receptionist</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">24/7 Call Answering</a></li>
                                 <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Lead Qualification</a></li>
                                 <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Appointment Booking</a></li>
                             </ul>

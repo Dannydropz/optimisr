@@ -6,7 +6,7 @@ import { motion, useScroll, MotionValue } from "framer-motion";
 const skills = [
     {
         title: "Call Answering",
-        description: "Every call picked up on the first ring. Your 24/7 receptionist answers with your business name, in a natural British voice, and handles the enquiry professionally — day, night, weekends, bank holidays.",
+        description: "Every call picked up on the first ring. Your 24/7 Call Answering answers with your business name, in a natural British voice, and handles the enquiry professionally — day, night, weekends, bank holidays.",
         icon: "📞",
         color: "bg-blue-100",
         textColor: "text-blue-600"
@@ -90,7 +90,7 @@ const SkillsSection: React.FC = () => {
             <div className="max-w-7xl mx-auto px-6 mb-16 md:mb-24 relative z-10">
                 <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight text-center md:text-left">
                     <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>EVERYTHING YOUR</motion.span>
-                    <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>24/7 RECEPTIONIST</motion.span>
+                    <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>24/7 CALL ANSWERING</motion.span>
                     <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>DOES FOR YOU.</motion.span>
                 </h2>
                 <motion.p

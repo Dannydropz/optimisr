@@ -208,7 +208,7 @@ const Hero: React.FC = () => {
                 <div className="flex flex-col items-start text-left pr-8 lg:pr-12 z-10">
 
                     <div className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
-                        24/7 Receptionist for Tradespeople
+                        24/7 Call Answering for Tradespeople
                     </div>
 
                     <h1 className="text-[clamp(4rem,6.5vw,7rem)] font-black font-condensed uppercase leading-[0.88] tracking-[-0.04em] text-optimisr-black mb-6 flex flex-col items-start w-full">
@@ -231,7 +231,7 @@ const Hero: React.FC = () => {
                     </h1>
 
                     <p className="text-[18px] lg:text-[20px] xl:text-[22px] text-optimisr-black max-w-[480px] mb-10 leading-relaxed font-medium">
-                        Your 24/7 receptionist answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
+                        Your 24/7 Call Answering answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
                     </p>
 
                     <div className="flex flex-row items-center gap-4">
@@ -260,7 +260,7 @@ const Hero: React.FC = () => {
             <div className="md:hidden flex flex-col items-center text-center px-6 pt-36 pb-16">
 
                 <div className="mb-4 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
-                    24/7 Receptionist for Tradespeople
+                    24/7 Call Answering for Tradespeople
                 </div>
 
                 <h1 className="text-[clamp(2.5rem,10vw,4rem)] font-black font-condensed uppercase leading-[0.95] tracking-[-0.04em] text-optimisr-black mb-6 flex flex-col items-center w-full">
@@ -282,7 +282,7 @@ const Hero: React.FC = () => {
                 </h1>
 
                 <p className="text-[18px] text-optimisr-black max-w-[500px] mb-8 leading-relaxed font-medium mx-auto">
-                    Your 24/7 receptionist answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
+                    Your 24/7 Call Answering answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">

@@ -14,7 +14,7 @@ const FinalCTA: React.FC = () => {
                             <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>Is Already Calling.</motion.span>
                         </h2>
                         <p className="text-[21px] font-medium text-black/50">
-                            Every missed call is a job your competitor picks up. Get your AI receptionist live in under a week — one flat monthly price, no contracts, cancel anytime.
+                            Every missed call is a job your competitor picks up. Get your AI Call Answering live in under a week — one flat monthly price, no contracts, cancel anytime.
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row items-center gap-6 w-full lg:w-auto">

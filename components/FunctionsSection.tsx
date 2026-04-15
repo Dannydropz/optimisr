@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const solutions = [
-    { title: "Step 1 — Your Phone Rings", text: "A potential customer calls your business number. Instead of voicemail, your 24/7 receptionist picks up instantly with a friendly, natural greeting using your business name." },
+    { title: "Step 1 — Your Phone Rings", text: "A potential customer calls your business number. Instead of voicemail, your 24/7 Call Answering picks up instantly with a friendly, natural greeting using your business name." },
     { title: "Step 2 — The AI Qualifies the Lead", text: "It asks the key questions — what job they need, their location, timing, and any details you want captured. No scripts that sound robotic. Natural conversation, tailored to your trade." },
     { title: "Step 3 — The Job Gets Booked", text: "If the lead matches your services, the AI checks your availability and books them straight into your calendar. The caller gets a confirmation. You get a notification." },
     { title: "Step 4 — You Get the Full Picture", text: "Instant text and email alert with the caller's name, number, job details, and booking time. Plus a full transcript of the call so you know exactly what was discussed." },
