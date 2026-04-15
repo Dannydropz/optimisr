@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const navLinks = [
     { name: "How It Works", href: "#" },
-    { name: "Features", href: "#" },
+    { name: "Features", href: "#features" },
     { name: "Pricing", href: "#pricing" },
     { name: "Demo", href: "#" },
     { name: "About", href: "#" },
