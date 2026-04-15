@@ -12,7 +12,7 @@ const stats = [
 
 const IntegrationsSection: React.FC = () => {
     return (
-        <section className="section-stack bg-[#F4F4F4] pt-16 md:pt-24 pb-24 md:pb-48 px-6 overflow-hidden">
+        <section className="section-stack bg-[#F4F4F4] pt-4 md:pt-8 pb-24 md:pb-48 px-6 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="max-w-4xl mb-12 md:mb-24">
                     <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-black font-condensed uppercase leading-[0.85] tracking-tighter mb-6 md:mb-8">
