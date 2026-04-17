@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 <img
                     src="/logo.png"
                     alt="optimisr"
-                    className={`transition-all duration-300 ${isScrolled ? "h-6 sm:h-8 md:h-10" : "h-7 sm:h-10 md:h-14"} w-auto`}
+                    className={`transition-all duration-300 ${isScrolled ? "h-8 sm:h-10 md:h-12" : "h-10 sm:h-14 md:h-16"} w-auto`}
                 />
             </a>
 

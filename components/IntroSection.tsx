@@ -36,7 +36,7 @@ const IntroSection: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.1, margin: "-60px" }}
                                 transition={{ duration: 0.9, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                                className="text-[clamp(4rem,10vw,6.5rem)] font-black font-condensed uppercase leading-[0.85] mb-10 tracking-tighter"
+                                className="text-[clamp(2.5rem,10vw,6.5rem)] font-black font-condensed uppercase leading-[0.85] mb-10 tracking-tighter"
                             >
                                 {item.label}
                             </motion.h2>
@@ -60,7 +60,7 @@ const IntroSection: React.FC = () => {
                     transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                     className="mt-32 md:mt-64"
                 >
-                    <h2 className="text-[clamp(3.5rem,9vw,8.5rem)] font-black font-condensed uppercase leading-[0.8] tracking-[-0.05em] text-white mb-12 md:mb-24 max-w-[90rem]">
+                    <h2 className="text-[clamp(2.5rem,9vw,8.5rem)] font-black font-condensed uppercase leading-[0.8] tracking-[-0.05em] text-white mb-12 md:mb-24 max-w-[90rem]">
                         <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>STOP GIVING</motion.span>
                         <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>LEADS TO YOUR</motion.span>
                         <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>COMPETITORS.</motion.span>
