@@ -207,7 +207,7 @@ const Hero: React.FC = () => {
                 {/* Left column — copy */}
                 <div className="flex flex-col items-start text-left pr-8 lg:pr-12 z-10">
 
-                    <div className="mb-5 inline-block text-[13px] font-bold tracking-[0.2em] text-optimisr-black/50 uppercase">
+                    <div className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
                         Optimisr™ Aesthetics System
                     </div>
 
@@ -260,7 +260,7 @@ const Hero: React.FC = () => {
             {/* ── MOBILE: stacked layout ── */}
             <div className="md:hidden flex flex-col items-center text-center px-6 pt-36 pb-16">
 
-                <div className="mb-4 inline-block text-[12px] font-bold tracking-[0.2em] text-optimisr-black/50 uppercase">
+                <div className="mb-4 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
                     Optimisr™ Aesthetics System
                 </div>
 
