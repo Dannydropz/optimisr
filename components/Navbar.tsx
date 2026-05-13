@@ -4,11 +4,11 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const navLinks = [
-    { name: "How It Works", href: "#" },
-    { name: "Features", href: "#features" },
+    { name: "How It Works", href: "#how-it-works" },
+    { name: "What We Do", href: "#what-we-do" },
+    { name: "Skin Analysis", href: "#skin-analysis" },
     { name: "Pricing", href: "#pricing" },
-    { name: "Demo", href: "#" },
-    { name: "About", href: "#" },
+    { name: "About", href: "#about" },
 ];
 
 const Navbar: React.FC = () => {
@@ -62,12 +62,12 @@ const Navbar: React.FC = () => {
 
             {/* CTA Button */}
             <motion.a
-                href="#"
+                href="#audit"
                 style={{ backgroundColor: ctaBg, color: ctaColor }}
                 className={`transition-all duration-300 rounded-xl md:rounded-2xl text-[14px] md:text-[17px] font-bold hover:scale-105 active:scale-95 flex items-center justify-center ${isScrolled ? "px-4 py-2.5 md:px-6 md:py-3" : "px-5 py-3 md:px-8 md:py-4"
                     }`}
             >
-                Hear a Demo Call
+                Book a Free Audit
             </motion.a>
         </header>
     );

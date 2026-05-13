@@ -5,40 +5,51 @@ import { motion } from "framer-motion";
 
 const useCases = [
     {
-        title: "Omnichannel Support — Resolve Issues Faster Than Ever.",
-        description: "Your AI Agent handles inquiries via web chat, SMS, email, and social media seamlessly. It understands intent and provides accurate, instant resolutions 24/7.",
-        stat: "< 60s",
-        statLabel: "Response Time",
+        title: "Step 1 — Patient takes a selfie.",
+        description: "From their phone, anywhere. No app download. Just a link on your website or shared in your ads.",
+        stat: "01",
+        statLabel: "Capture",
     },
     {
-        title: "Workflow Automation — Your Operations, Running on Autopilot.",
-        description: "Let your AI Agent qualify prospects, update CRM records, or manage scheduling. It handles the repetitive back-and-forth so your team stays focused on complex tasks.",
-        stat: "10x",
-        statLabel: "Efficiency Gain",
+        title: "Step 2 — AI analyses their skin.",
+        description: "Fine lines, wrinkles, texture, pigmentation, pores, hydration. The analysis runs in seconds and generates a personalised skin report.",
+        stat: "02",
+        statLabel: "Analyze",
     },
     {
-        title: "Smart Insights — Turn Interactions Into Actionable Data.",
-        description: "Analyze every conversation to identify trends, extract feedback, and optimize performance. Turn unstructured communication into clear paths for growth.",
-        stat: "85%",
-        statLabel: "Data Utilization",
+        title: "Step 3 — Matched to your treatments.",
+        description: "The report doesn't just flag concerns — it recommends specific treatments that your clinic offers. Anti-wrinkle injections for dynamic lines. Chemical peels for texture.",
+        stat: "03",
+        statLabel: "Recommend",
+    },
+    {
+        title: "Step 4 — Direct booking link.",
+        description: "The report includes a clear CTA to book a consultation at your clinic. The patient arrives pre-educated, pre-qualified, and ready to commit.",
+        stat: "04",
+        statLabel: "Convert",
     },
 ];
 
 const UseCasesSection: React.FC = () => {
     return (
         <section className="section-stack bg-white px-6 pt-48 pb-64 rounded-t-[100px] -mt-[100px] overflow-clip">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-10">
-                    <motion.h2
-                        initial={{ opacity: 0, x: 100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-80px" }}
-                        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold font-condensed uppercase leading-none tracking-tight"
-                    >
-                        How Optimisr Works For You.
-                    </motion.h2>
-                    <div className="flex gap-4">
+            <div className="max-w-7xl mx-auto" id="skin-analysis">
+                <div className="flex flex-col lg:flex-row items-start justify-between mb-16 gap-10">
+                    <div className="max-w-2xl">
+                        <motion.h2
+                            initial={{ opacity: 0, x: 100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-80px" }}
+                            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                            className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold font-condensed uppercase leading-none tracking-tight mb-6"
+                        >
+                            YOUR SECRET WEAPON FOR CONSULTATION BOOKINGS.
+                        </motion.h2>
+                        <p className="text-[20px] text-black/60 font-medium">
+                            Most clinics rely on generic before-and-after galleries to convert browsers into patients. That works — but it&apos;s passive. The Optimisr Skin Analysis is active. It meets the patient where they are, gives them something personalised, and moves them one step closer to booking.
+                        </p>
+                    </div>
+                    <div className="flex gap-4 lg:mt-4">
                         <button className="w-16 h-16 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-all">←</button>
                         <button className="w-16 h-16 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-all">→</button>
                     </div>

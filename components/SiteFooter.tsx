@@ -16,7 +16,7 @@ const SiteFooter: React.FC = () => {
                             className="h-10 md:h-14 w-auto object-contain shrink-0 self-start"
                         />
                         <p className="text-[20px] font-medium leading-[1.3] text-white/50">
-                            Never miss a lead. Built for tradespeople.
+                            Never lose a lead. Built for aesthetic clinics.
                         </p>
                         <p className="text-[17px] font-medium leading-[1.3] text-white/40">
                             Have questions? Drop us a line &rarr; <a href="mailto:hello@optimisr.com" className="text-white">hello@optimisr.com</a>
@@ -27,37 +27,37 @@ const SiteFooter: React.FC = () => {
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Platform</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">How It Works</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">24/7 Call Answering</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Lead Qualification</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Appointment Booking</a></li>
+                                <li><a href="#how-it-works" className="hover:text-optimisr-yellow transition-colors">How It Works</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">AI Call Answering</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Lead Response Automation</a></li>
+                                <li><a href="#skin-analysis" className="hover:text-optimisr-yellow transition-colors">Skin Analysis</a></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Features</h4>
+                            <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">What We Do</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Call Answering</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Instant Notifications</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Follow-Up Automation</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Review Management</a></li>
+                                <li><a href="#what-we-do" className="hover:text-optimisr-yellow transition-colors">24/7 Call Answering</a></li>
+                                <li><a href="#what-we-do" className="hover:text-optimisr-yellow transition-colors">Instant Lead Response</a></li>
+                                <li><a href="#what-we-do" className="hover:text-optimisr-yellow transition-colors">Consultation Booking</a></li>
+                                <li><a href="#what-we-do" className="hover:text-optimisr-yellow transition-colors">Review Automation</a></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Industries</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Plumbers &amp; Gas Engineers</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Electricians</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Roofers &amp; Builders</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Locksmiths</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">General Home Services</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Aesthetic Clinics</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Cosmetic Clinics</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Medical Spas</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Skin Clinics</a></li>
+                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Laser &amp; Beauty Clinics</a></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Company</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">About</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Pricing</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Contact</a></li>
+                                <li><a href="#about" className="hover:text-optimisr-yellow transition-colors">About</a></li>
+                                <li><a href="#pricing" className="hover:text-optimisr-yellow transition-colors">Pricing</a></li>
+                                <li><a href="#audit" className="hover:text-optimisr-yellow transition-colors">Contact</a></li>
                             </ul>
                         </div>
                     </div>

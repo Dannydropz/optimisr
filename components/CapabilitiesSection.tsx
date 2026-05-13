@@ -5,32 +5,41 @@ import { motion } from "framer-motion";
 
 const capabilities = [
     {
-        title: "Increases Operational Output",
-        description: "Focused on execution and precision, our AI Agents increase your team's output by automating routine digital tasks. They respond instantly, process data, and execute workflows asynchronously.",
-        stat: "30%",
-        statLabel: "Capacity Increase",
-        link: "#",
+        title: "NEVER MISS A CALL AGAIN",
+        description: "Your AI receptionist answers every call — day, night, weekends, bank holidays. A natural British voice greets callers with your clinic name, answers common questions about your treatments, qualifies the enquiry, and captures their details. You get an instant alert with the caller's name, what they're interested in, and their contact details. No voicemail. No hold music. No lost leads.",
+        stat: "24/7",
+        statLabel: "Coverage",
+        link: "#audit",
     },
     {
-        title: "Adapts To Any Data Structure",
-        description: "Train our Agents on your internal docs, CRM, or knowledge base. It learns the exact context of your company and applies nuanced logic to customer requests seamlessly.",
-        stat: "100%",
-        statLabel: "Custom Knowledge",
-        link: "#",
+        title: "SPEED-TO-LEAD THAT BOOKS CONSULTATIONS",
+        description: "When a lead fills in a form, sends a DM, or submits an enquiry on your website, our system responds in seconds — not hours. Automated SMS, email, and WhatsApp follow-up that feels personal. It answers their questions, shares relevant treatment info, and guides them to book a consultation.",
+        stat: "60s",
+        statLabel: "Response Time",
+        link: "#audit",
     },
     {
-        title: "Deploys In Minutes",
-        description: "Built for true plug-and-play. Connect your data sources, establish the guardrails, and your customized AI Agent is live across multiple channels in record time.",
-        stat: "48h",
-        statLabel: "Average Setup",
-        link: "#",
+        title: "AI SKIN ANALYSIS THAT SELLS FOR YOU",
+        description: "Give prospective patients a personalised skin assessment before they even walk through the door. They upload a selfie. The AI analyses their skin — fine lines, texture, pigmentation, hydration. They get a personalised report highlighting areas for improvement, matched to treatments your clinic actually offers, with a direct link to book a consultation.",
+        stat: "AI",
+        statLabel: "Analysis Tool",
+        link: "#audit",
     },
 ];
 
 const CapabilitiesSection: React.FC = () => {
     return (
         <section className="section-stack bg-white px-6 pt-48 pb-64 rounded-t-[100px] -mt-[100px]">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto" id="what-we-do">
+                <div className="mb-16 md:mb-24">
+                    <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold font-condensed uppercase leading-[0.9] tracking-tight">
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>HOW OPTIMISR</motion.span>
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>PLUGS THE LEAKS.</motion.span>
+                    </h2>
+                    <p className="text-[21px] leading-[1.4] text-black/50 font-medium mt-6 max-w-2xl">
+                        Three systems that work together to make sure no lead slips through.
+                    </p>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {capabilities.map((cap, i) => (
                         <motion.div

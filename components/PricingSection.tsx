@@ -5,50 +5,51 @@ import { motion } from "framer-motion";
 
 const tiers = [
     {
-        name: "Starter",
-        price: "£197",
-        setup: "£497",
+        name: "Essentials",
+        price: "£297",
+        setup: "£997",
         period: "/month",
         popular: false,
-        bestFor: "Sole traders who want cover when they&apos;re on a job.",
+        bestFor: "Clinics that want 24/7 phone coverage and no more missed calls.",
         features: [
-            "Up to 50 AI-answered calls/month",
+            "AI call answering — up to 75 calls/month",
+            "Natural British AI voice with your clinic name",
             "Missed call alerts via SMS and email",
-            "Custom greeting with your business name",
-            "British AI voice",
+            "Lead capture and instant notifications",
             "Weekly summary report",
         ],
     },
     {
         name: "Growth",
-        price: "£297",
-        setup: "£497",
+        price: "£497",
+        setup: "£997",
         period: "/month",
         popular: true,
-        bestFor: "Busy tradespeople who want leads qualified and booked automatically.",
+        bestFor: "Clinics running ads who want leads qualified and consultations booked automatically.",
         features: [
-            "Up to 150 AI-answered calls/month",
-            "Everything in Starter, plus:",
-            "Lead qualification (job type, location, budget, urgency)",
-            "Appointment booking into your calendar",
-            "SMS follow-up to every caller",
+            "Up to 200 AI-answered calls/month",
+            "Everything in Essentials, plus:",
+            "Lead qualification (treatment interest, budget, urgency)",
+            "Automated SMS/email/WhatsApp follow-up",
+            "Consultation booking into your calendar",
             "Weekly Lead Recovery Report",
         ],
     },
     {
-        name: "Pro",
-        price: "£497",
-        setup: "£497",
+        name: "Premium",
+        price: "£697",
+        setup: "£997",
         period: "/month",
         popular: false,
-        bestFor: "Trade businesses with a team, doing £500k+ and wanting full automation.",
+        bestFor: "Established clinics doing £30k+/month who want the full lead recovery and conversion system.",
         features: [
             "Unlimited AI-answered calls",
             "Everything in Growth, plus:",
-            "Google Review automation",
+            "AI Skin Analysis tool — white-labelled to your clinic",
+            "Google Review automation after treatments",
             "Monthly optimisation call",
+            "Performance dashboard — calls, leads, bookings, revenue recovered",
             "Priority support and script changes",
-            "Dashboard showing calls, bookings, and revenue recovered",
         ],
     },
 ];
@@ -66,10 +67,10 @@ const PricingSection: React.FC = () => {
                 >
                     <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-black font-condensed uppercase leading-[0.9] tracking-tight">
                         <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>SIMPLE PRICING.</motion.span>
-                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>NO SURPRISES.</motion.span>
+                        <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>BUILT FOR CLINICS.</motion.span>
                     </h2>
                     <p className="text-[21px] leading-[1.4] text-black/50 font-medium mt-6 max-w-2xl">
-                        One flat monthly fee. You know exactly what you&apos;re paying. Your 24/7 Call Answering pays for itself with one extra job.
+                        One flat monthly fee. No contracts. Your system pays for itself with one extra consultation.
                     </p>
                 </motion.div>
 
@@ -126,14 +127,14 @@ const PricingSection: React.FC = () => {
                                     Best for: {tier.bestFor}
                                 </p>
                                 <a
-                                    href="#"
+                                    href="#audit"
                                     className={`block w-full text-center py-4 rounded-xl text-[16px] font-bold transition-all hover:scale-105 active:scale-95 ${
                                         tier.popular
                                             ? "bg-optimisr-yellow text-black"
                                             : "bg-black text-white"
                                     }`}
                                 >
-                                    Get Started
+                                    Book a Free Audit
                                 </a>
                             </div>
                         </motion.div>
@@ -157,7 +158,7 @@ const PricingSection: React.FC = () => {
                     <div className="bg-white rounded-[1.5rem] p-8 border border-black/5">
                         <span className="text-3xl mb-4 block">💰</span>
                         <p className="text-[18px] font-semibold leading-snug text-black/80">
-                            One extra job pays for your entire month. Most clients recover their investment in the first week.
+                            One extra consultation pays for your entire month. A single Botox patient is worth £500–2,000/year. Most clinics recover their investment in the first week.
                         </p>
                     </div>
                 </motion.div>

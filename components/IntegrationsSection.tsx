@@ -4,10 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const stats = [
-    { value: "< 3s", label: "Average answer time", highlight: false },
-    { value: "30%+", label: "More leads recovered", highlight: false },
-    { value: "24/7", label: "Every call answered — nights, weekends, bank holidays", highlight: false },
-    { value: "£2,400+", label: "Average monthly revenue recovered per client", highlight: true },
+    { value: "< 3s", label: "Average call answer time", highlight: false },
+    { value: "30–40%", label: "Leads most clinics lose to slow follow-up", highlight: false },
+    { value: "21x", label: "More likely to book when you respond within 5 mins", highlight: false },
+    { value: "60s", label: "Average lead response time with Optimisr", highlight: false },
+    { value: "24/7", label: "Every call answered — nights, weekends", highlight: false },
+    { value: "£3,000+", label: "Average monthly revenue recovered per clinic", highlight: true },
 ];
 
 const IntegrationsSection: React.FC = () => {
@@ -20,11 +22,11 @@ const IntegrationsSection: React.FC = () => {
                         <motion.span className="block" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>DON&apos;T LIE.</motion.span>
                     </h2>
                     <p className="text-[21px] leading-[1.4] text-black/50 font-medium">
-                        Tradespeople using Optimisr recover leads they were losing every single day. No extra staff, no answering service, no missed jobs.
+                        Clinics using Optimisr recover leads they were losing every single day. No extra staff, no missed enquiries.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {stats.map((stat, i) => (
                         <motion.div
                             key={stat.label}

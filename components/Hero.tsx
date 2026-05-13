@@ -150,10 +150,10 @@ const Hero: React.FC = () => {
     const [nodeIndex, setNodeIndex] = useState(0);
 
     const rotatingWords = [
-        "Booked Job.",
-        "New Customer.",
+        "Booked Consultation.",
+        "New Patient.",
         "5-Star Review.",
-        "Closed Deal."
+        "Treatment."
     ];
 
     useEffect(() => {
@@ -208,12 +208,12 @@ const Hero: React.FC = () => {
                 <div className="flex flex-col items-start text-left pr-8 lg:pr-12 z-10">
 
                     <div className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
-                        24/7 Call Answering for Tradespeople
+                        AI-Powered Lead Generation for Clinics
                     </div>
 
                     <h1 className="text-[clamp(4rem,6.5vw,7rem)] font-black font-condensed uppercase leading-[0.88] tracking-[-0.04em] text-optimisr-black mb-6 flex flex-col items-start w-full">
                         <motion.span initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }} className="block">Turn Every</motion.span>
-                        <motion.span initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }} className="block">Call Into a</motion.span>
+                        <motion.span initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }} className="block">Enquiry Into a</motion.span>
                         <motion.div initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }} className="text-optimisr-yellow relative w-full h-[1.05em] mt-2">
                             <AnimatePresence mode="popLayout">
                                 <motion.span
@@ -231,15 +231,15 @@ const Hero: React.FC = () => {
                     </h1>
 
                     <p className="text-[18px] lg:text-[20px] xl:text-[22px] text-optimisr-black max-w-[480px] mb-10 leading-relaxed font-medium">
-                        Answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
+                        Answers every call, responds to leads in seconds, and books the consultation &mdash; while you&apos;re treating patients.
                     </p>
 
                     <div className="flex flex-row items-center gap-4">
                         <a
-                            href="#"
+                            href="#audit"
                             className="px-8 py-4 bg-optimisr-black text-white rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all"
                         >
-                            Hear a Demo Call
+                            Book a Free Audit
                         </a>
                         <a
                             href="#pricing"
@@ -260,11 +260,11 @@ const Hero: React.FC = () => {
             <div className="md:hidden flex flex-col items-center text-center px-6 pt-36 pb-16">
 
                 <div className="mb-4 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-widest text-optimisr-black uppercase border-2 border-optimisr-black/10 bg-white/50">
-                    24/7 Call Answering for Tradespeople
+                    AI-Powered Lead Generation for Clinics
                 </div>
 
                 <h1 className="text-[clamp(2.5rem,10vw,4rem)] font-black font-condensed uppercase leading-[0.95] tracking-[-0.04em] text-optimisr-black mb-6 flex flex-col items-center w-full">
-                    <motion.span initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }} className="text-center block">Turn Every Call Into a</motion.span>
+                    <motion.span initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }} className="text-center block">Turn Every Enquiry Into a</motion.span>
                     <motion.div initial={{ opacity: 0, y: 50, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }} className="text-optimisr-yellow relative w-full h-[1.1em] mt-1">
                         <AnimatePresence mode="popLayout">
                             <motion.span
@@ -282,12 +282,12 @@ const Hero: React.FC = () => {
                 </h1>
 
                 <p className="text-[18px] text-optimisr-black max-w-[500px] mb-8 leading-relaxed font-medium mx-auto">
-                    Answers every call, qualifies the lead, and books the job &mdash; while you&apos;re on-site earning money.
+                    Answers every call, responds to leads in seconds, and books the consultation &mdash; while you&apos;re treating patients.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
-                    <a href="#" className="px-8 py-4 bg-optimisr-black text-white rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all">
-                        Hear a Demo Call
+                    <a href="#audit" className="px-8 py-4 bg-optimisr-black text-white rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all">
+                        Book a Free Audit
                     </a>
                     <a href="#pricing" className="px-8 py-4 border-2 border-optimisr-black text-optimisr-black rounded-2xl text-[17px] font-bold hover:scale-105 active:scale-95 transition-all">
                         See Pricing
