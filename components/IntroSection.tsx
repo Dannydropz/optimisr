@@ -25,7 +25,7 @@ const IntroSection: React.FC = () => {
             whileInView={{ y: 0, borderRadius: "100px 100px 0 0" }}
             viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="section-stack bg-optimisr-black text-white pt-32 md:pt-48 pb-32 md:pb-64 px-6 md:px-12 xl:px-20 -mt-[100px] overflow-clip"
+            className="section-stack bg-optimisr-black text-white pt-32 md:pt-48 pb-32 md:pb-64 px-6 md:px-12 xl:px-20 overflow-clip"
         >
             <div className="w-full">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
