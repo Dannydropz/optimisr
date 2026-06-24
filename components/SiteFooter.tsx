@@ -27,37 +27,37 @@ const SiteFooter: React.FC = () => {
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Platform</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#how-it-works" className="hover:text-optimisr-yellow transition-colors">How It Works</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">AI Call Answering</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Lead Response Automation</a></li>
-                                <li><a href="#skin-analysis" className="hover:text-optimisr-yellow transition-colors">Skin Analysis</a></li>
+                                <li><a href="/#how-it-works" className="hover:text-optimisr-yellow transition-colors">How It Works</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">AI Call Answering</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Lead Response Automation</a></li>
+                                <li><a href="/#skin-analysis" className="hover:text-optimisr-yellow transition-colors">Skin Analysis</a></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">What We Do</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#what-we-do" className="hover:text-optimisr-yellow transition-colors">24/7 Call Answering</a></li>
-                                <li><a href="#what-we-do" className="hover:text-optimisr-yellow transition-colors">Instant Lead Response</a></li>
-                                <li><a href="#what-we-do" className="hover:text-optimisr-yellow transition-colors">Consultation Booking</a></li>
-                                <li><a href="#what-we-do" className="hover:text-optimisr-yellow transition-colors">Review Automation</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">24/7 Call Answering</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Instant Lead Response</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Consultation Booking</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Review Automation</a></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Industries</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Aesthetic Clinics</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Cosmetic Clinics</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Medical Spas</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Skin Clinics</a></li>
-                                <li><a href="#" className="hover:text-optimisr-yellow transition-colors">Laser &amp; Beauty Clinics</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Aesthetic Clinics</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Cosmetic Clinics</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Medical Spas</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Skin Clinics</a></li>
+                                <li><a href="/#what-we-do" className="hover:text-optimisr-yellow transition-colors">Laser &amp; Beauty Clinics</a></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-[14px] font-bold text-white/40 uppercase tracking-widest">Company</h4>
                             <ul className="space-y-3 text-[17px] font-medium">
-                                <li><a href="#about" className="hover:text-optimisr-yellow transition-colors">About</a></li>
-                                <li><a href="#pricing" className="hover:text-optimisr-yellow transition-colors">Pricing</a></li>
-                                <li><a href="#audit" className="hover:text-optimisr-yellow transition-colors">Contact</a></li>
+                                <li><a href="/#about" className="hover:text-optimisr-yellow transition-colors">About</a></li>
+                                <li><a href="/#pricing" className="hover:text-optimisr-yellow transition-colors">Pricing</a></li>
+                                <li><a href="/#audit" className="hover:text-optimisr-yellow transition-colors">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ const SiteFooter: React.FC = () => {
                         <a href="#" className="hover:text-white">LinkedIn</a>
                         <a href="#" className="hover:text-white">Twitter</a>
                         <a href="#" className="hover:text-white">Terms of Service</a>
-                        <a href="#" className="hover:text-white">Privacy Statement</a>
+                        <a href="/privacy" className="hover:text-white">Privacy Statement</a>
                     </div>
                 </div>
             </div>
