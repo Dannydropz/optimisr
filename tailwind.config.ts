@@ -14,7 +14,8 @@ const config: Config = {
         optimisr: {
           black: "#000000",
           grey: "#E5E5E5",
-          yellow: "#F9E547",
+          yellow: "#D4AF37",
+          yellowText: "#000000",
           darkgrey: "#444444",
         },
       },

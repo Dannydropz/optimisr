@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const tasks = [
-    { label: "New Lead", type: "brand", bg: "bg-optimisr-yellow", text: "text-black", depth: "bg-optimisr-yellow/80" },
+    { label: "New Lead", type: "brand", bg: "bg-optimisr-yellow", text: "text-optimisr-yellowText", depth: "bg-optimisr-yellow/80" },
     { label: "Book Appt", type: "stone", bg: "bg-neutral-100", text: "text-neutral-600", depth: "bg-neutral-300" },
     { label: "Follow Up", type: "wood", bg: "bg-[#D2B48C]", text: "text-[#5D4037]", depth: "#A1887F" },
     { label: "Send Quote", type: "dark", bg: "bg-black", text: "text-white", depth: "bg-neutral-800" },
     { label: "Get Review", type: "stone", bg: "bg-neutral-200", text: "text-neutral-700", depth: "bg-neutral-400" },
-    { label: "Close Deal", type: "brand", bg: "bg-optimisr-yellow", text: "text-black", depth: "bg-optimisr-yellow/80" },
+    { label: "Close Deal", type: "brand", bg: "bg-optimisr-yellow", text: "text-optimisr-yellowText", depth: "bg-optimisr-yellow/80" },
 ];
 
 const TaskBlockStack = () => {

@@ -110,7 +110,7 @@ const DesktopNodeGraph = ({ activeIndex }: { activeIndex: number }) => {
                         <circle cx="0" cy="0" r="125" fill="none" stroke="#a7f3d0" strokeWidth="1" opacity="0.3"/>
                     </g>
                     <g transform={`translate(${CX},${CY})`}>
-                        <circle cx="0" cy="0" r="85" fill="none" stroke="#F9E547" strokeWidth="4" className="animate-emanate-pulse"/>
+                        <circle cx="0" cy="0" r="85" fill="none" stroke="#D4AF37" strokeWidth="4" className="animate-emanate-pulse"/>
                     </g>
                 </svg>
                 <div className="absolute z-20 flex items-center justify-center bg-white rounded-full w-[170px] h-[170px] shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-50"

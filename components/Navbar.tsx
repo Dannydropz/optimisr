@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         return () => unsubscribe();
     }, [scrollY]);
 
-    const ctaBg = useTransform(scrollY, [0, 500], ["#000000", "#F9E547"]);
+    const ctaBg = useTransform(scrollY, [0, 500], ["#000000", "#D4AF37"]);
     const ctaColor = useTransform(scrollY, [0, 500], ["#FFFFFF", "#000000"]);
 
     return (

@@ -42,7 +42,7 @@ const IntegrationsSection: React.FC = () => {
                         >
                             <motion.span
                                 className={`text-[42px] font-black font-condensed transition-transform ${
-                                    stat.highlight ? 'text-black group-hover:scale-110' : 'text-black group-hover:scale-110'
+                                    stat.highlight ? 'text-optimisr-yellowText group-hover:scale-110' : 'text-black group-hover:scale-110'
                                 }`}
                                 whileInView={{ scale: [0.5, 1] }}
                                 viewport={{ once: true, margin: "-60px" }}
@@ -51,7 +51,7 @@ const IntegrationsSection: React.FC = () => {
                                 {stat.value}
                             </motion.span>
                             <span className={`text-[14px] font-bold uppercase tracking-widest mt-4 leading-snug ${
-                                stat.highlight ? 'text-black/70' : 'text-black/40 group-hover:text-black/60 transition-colors'
+                                stat.highlight ? 'text-optimisr-yellowText/70' : 'text-black/40 group-hover:text-black/60 transition-colors'
                             }`}>
                                 {stat.label}
                             </span>

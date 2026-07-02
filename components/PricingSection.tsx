@@ -90,7 +90,7 @@ const PricingSection: React.FC = () => {
                         >
                             {tier.popular && (
                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                                    <span className="bg-optimisr-yellow text-black text-[12px] font-black uppercase tracking-widest px-4 py-2 rounded-full">
+                                    <span className="bg-optimisr-yellow text-optimisr-yellowText text-[12px] font-black uppercase tracking-widest px-4 py-2 rounded-full">
                                         Most Popular
                                     </span>
                                 </div>
@@ -114,7 +114,7 @@ const PricingSection: React.FC = () => {
                                     }`}>
                                         {!feature.includes("plus") && (
                                             <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-black ${
-                                                tier.popular ? "bg-optimisr-yellow text-black" : "bg-black/10 text-black/60"
+                                                tier.popular ? "bg-optimisr-yellow text-optimisr-yellowText" : "bg-black/10 text-black/60"
                                             }`}>✓</span>
                                         )}
                                         <span className={feature.includes("plus") ? "pl-8" : ""}>{feature}</span>
@@ -130,7 +130,7 @@ const PricingSection: React.FC = () => {
                                     href="#audit"
                                     className={`block w-full text-center py-4 rounded-xl text-[16px] font-bold transition-all hover:scale-105 active:scale-95 ${
                                         tier.popular
-                                            ? "bg-optimisr-yellow text-black"
+                                            ? "bg-optimisr-yellow text-optimisr-yellowText"
                                             : "bg-black text-white"
                                     }`}
                                 >

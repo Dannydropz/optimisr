@@ -20,7 +20,7 @@ const FinalCTA: React.FC = () => {
                     <div className="flex flex-col sm:flex-row items-center gap-6 w-full lg:w-auto">
                         <a
                             href="#audit"
-                            className="w-full sm:w-auto px-12 py-6 bg-optimisr-yellow rounded-2xl text-[19px] font-bold text-center hover:scale-105 transition-all whitespace-nowrap"
+                            className="w-full sm:w-auto px-12 py-6 bg-optimisr-yellow text-optimisr-yellowText rounded-2xl text-[19px] font-bold text-center hover:scale-105 transition-all whitespace-nowrap"
                         >
                             Book a Free Audit
                         </a>

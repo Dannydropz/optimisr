@@ -118,7 +118,7 @@ const DesktopNodeGraph = ({ activeIndex }: { activeIndex: number }) => {
                     <circle cx="0" cy="0" r="105" fill="none" stroke="#d8b4e2" strokeWidth="2" opacity="0.4" />
                     <circle cx="0" cy="0" r="125" fill="none" stroke="#a7f3d0" strokeWidth="1" opacity="0.3" />
                 </g>
-                <circle cx="500" cy="250" r="85" fill="none" stroke="#F9E547" strokeWidth="4" className="animate-emanate-pulse" />
+                <circle cx="500" cy="250" r="85" fill="none" stroke="#D4AF37" strokeWidth="4" className="animate-emanate-pulse" />
             </svg>
 
             {/* Center Node */}
@@ -210,7 +210,7 @@ const MobileNodeGraph = ({ activeIndex }: { activeIndex: number }) => {
             <div className="relative z-20 flex flex-col items-center justify-center bg-white rounded-full w-[140px] h-[140px] shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-50 my-auto">
                  <div className="absolute inset-[-15px] rounded-full border border-[#d8b4e2] opacity-40 animate-center-pulse pointer-events-none"></div>
                  <div className="absolute inset-[-30px] rounded-full border border-[#a7f3d0] opacity-30 pointer-events-none"></div>
-                 <div className="absolute inset-0 rounded-full border-4 border-[#F9E547] animate-emanate-pulse pointer-events-none z-0"></div>
+                 <div className="absolute inset-0 rounded-full border-4 border-[#D4AF37] animate-emanate-pulse pointer-events-none z-0"></div>
                  <Image src="/logo.png" alt="Optimisr" width={100} height={28} className="w-[100px] h-auto relative z-10" priority />
             </div>
 
